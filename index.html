@@ -14516,7 +14516,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Calculate Rolling performance from returns using 210-days time windows.</span>
@@ -14536,17 +14536,6 @@ a.anchor-link {
 <span class="c1"># let&#39;s debug it a little and verify apply.rolling command results</span>
 <span class="nf">print</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;The first annReturn should be %.7f&quot;</span><span class="p">,</span><span class="nf">mean</span><span class="p">(</span><span class="nf">head</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span><span class="m">210</span><span class="p">))</span> <span class="o">*</span> <span class="m">365</span><span class="p">))</span>
 <span class="nf">print</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;The last annReturn should be %.7f&quot;</span><span class="p">,</span><span class="nf">mean</span><span class="p">(</span><span class="nf">tail</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span><span class="m">210</span><span class="p">))</span> <span class="o">*</span> <span class="m">365</span><span class="p">))</span>
-<span class="c1"># ------------------------------------------------------</span>
-
-<span class="c1"># Calculate rolling annualized returns</span>
-<span class="n">annReturn</span> <span class="o">=</span> <span class="nf">apply.rolling</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="m">210</span><span class="p">,</span> <span class="n">FUN</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="p">{</span> <span class="nf">mean</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="o">*</span> <span class="m">365</span><span class="p">}</span> <span class="p">)</span>
-
-<span class="c1"># Remove first 209 undefined rows</span>
-<span class="n">annReturn</span> <span class="o">=</span> <span class="nf">na.omit</span><span class="p">(</span><span class="n">annReturn</span><span class="p">);</span> <span class="nf">colnames</span><span class="p">(</span><span class="n">annReturn</span><span class="p">)</span> <span class="o">=</span> <span class="s">&quot;AnnReturn210&quot;</span>
-
-<span class="c1"># Show what we have:</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">annReturn</span><span class="p">)</span>
-<span class="nf">tail</span><span class="p">(</span><span class="n">annReturn</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14571,6 +14560,37 @@ a.anchor-link {
 </pre>
 </div>
 </div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Calculate rolling annualized returns</span>
+<span class="n">annReturn</span> <span class="o">=</span> <span class="nf">apply.rolling</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="m">210</span><span class="p">,</span> <span class="n">FUN</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="p">{</span> <span class="nf">mean</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="o">*</span> <span class="m">365</span><span class="p">}</span> <span class="p">)</span>
+
+<span class="c1"># Remove first 209 undefined rows</span>
+<span class="n">annReturn</span> <span class="o">=</span> <span class="nf">na.omit</span><span class="p">(</span><span class="n">annReturn</span><span class="p">);</span> <span class="nf">colnames</span><span class="p">(</span><span class="n">annReturn</span><span class="p">)</span> <span class="o">=</span> <span class="s">&quot;AnnReturn210&quot;</span>
+
+<span class="c1"># Show what we have:</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">annReturn</span><span class="p">)</span>
+<span class="nf">tail</span><span class="p">(</span><span class="n">annReturn</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
 
