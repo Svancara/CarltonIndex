@@ -60,6 +60,7 @@ bindDataTogether = function(accountDaily,annReturn210,sd_time_win_annual) {
   
   data = merge(accountDaily,annReturn210Table)
   data = merge(data,sdTable)
-
+  setkey(data,date)
+  
   return (data)
 }
