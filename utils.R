@@ -48,17 +48,18 @@ transformDataToTimeSeries = function(dbData){
 }
 
 # Bind data by Dates together
-bindDataTogether = function(accountDaily,annReturn210,sd090) {
+bindDataTogether = function(accountDaily,annReturn210,sd_time_win_annual) {
   accountDaily = data.table("date" = index(accountDaily), coredata(accountDaily))
   setkey(accountDaily,date)
+  
   annReturn210Table = data.table("date" = index(annReturn210), coredata(annReturn210))
-  setkey(accountDaily,date)
-  sdTable090 = data.table("date" = index(sd090), coredata(sd090))
-  setkey(accountDaily,date)
+  setkey(annReturn210Table,date)
+  
+  sdTable = data.table("date" = index(sd_time_win_annual), coredata(sd_time_win_annual))
+  setkey(sdTable,date)
   
   data = merge(accountDaily,annReturn210Table)
-  data = merge(data,sdTable090)
-  setkey(accountDaily,date)
-  
+  data = merge(data,sdTable)
+
   return (data)
 }
