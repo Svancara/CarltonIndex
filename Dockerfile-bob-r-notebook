@@ -1,0 +1,38 @@
+# Step 2
+# Create final Docker image from bob/bob-r-notebook-base:libmariadb 
+
+FROM bob/bob-r-notebook-base:libmariadb
+
+USER root
+
+RUN apt-get update 
+
+RUN      R -e "install.packages('DBI',dependencies=TRUE, repos='cran.rstudio.com/')" \
+     && R -e "install.packages('data.table',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('doParallel',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('foreach',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('formatR',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('iterators',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('jsonlite',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('lubridate',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('PerformanceAnalytics',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('RCurl',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('rjson',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('RMySQL',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('stringr',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('timeDate',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('timeSeries',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('TTR',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('xts',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('zoo',dependencies=TRUE, repos='cran.rstudio.com/')" 
+#    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+
+# Expose Rserve port 
+EXPOSE 6311
+
+# Jupyter port 
+EXPOSE 8888 
+
+# Run this file to create Docker image (the period in the end is mandatory):
+# docker build -f Dockerfile-bob-r-notebook -t bob/bob-r-notebook:run .
+ 

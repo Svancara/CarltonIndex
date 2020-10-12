@@ -1,0 +1,66 @@
+Jak rozjet jupyter notebook pro R.
+----------------------------------
+
+Vychozi docker image je tady: https://github.com/jupyter/docker-stacks
+
+r-notebook je toto: jupyter/r-notebook
+
+Ten se da primo spustit takto:
+    docker run -it --rm  jupyter/r-notebook -p 8888:8888
+    
+Èímž se spustí Jupyter Notebook na portu 8888. Jak se pøipojit z browser to napíše na obrazovku.
+
+
+Ale pproblem je, že V R nejsou nainstalovane všechny knihovny a speciálnì instalace RMySQL havaruje
+a potøebuje nainstalovat linuxovou knohovnu libmariadbclient-dev
+
+Jenže ta nejde nainstalovat, protože nemam sudo prava.
+
+Takže je potøeba nedøíve si udìlat vlastní docker image, ktery vychazi z jupyter/r-notebook.
+
+Øeknìme že se bude jmenovat bob/r-notebook-base. 
+
+Pak ho spustit s parametry        
+
+docker run -it -e GRANT_SUDO=yes --user root bob/r-notebook-base bash
+
+a nainstalovat libmariadbclient-dev
+        
+        apt-get install libmariadbclient-dev
+   
+Pak udìlat docker commit
+
+A pak udìlat další image bob/r-notebook-base do ktereho se nainstaluji potøebné R knohovny vèetnì RMySQL.
+
+Bohužel to nejde pomocí install2.r protože ten v tomot image není.
+
+Takže se v Dockerfile musí použít tato metoda:
+
+   RUN R -e "install.packages('RMySQL',dependencies=TRUE, repos='cran.rstudio.com/')"
+       \ && R -e "install.packages('jsonlite',dependencies=TRUE, repos='cran.rstudio.com/')" 
+       \ && R -e "install.packages('tseries',dependencies=TRUE, repos='cran.rstudio.com/')" –
+  
+
+==================================================
+  POSTUP
+==================================================
+1) Vytvoøení vlastního docker image.
+
+docker build -f Dockerfile-bob-r-notebook-base -t bob/bob-r-notebook-base:base .
+
+2) Jeho spuštìní a ruèní instalace  libmariadbclient-dev
+ 
+docker run -it -e GRANT_SUDO=yes --user root bob/bob-r-notebook-base:base bash
+
+    apt-get update 
+    apt-get install libmariadbclient-dev
+    exit
+    
+3) docker commit CONTAINER-ID bob/bob-r-notebook-base:libmariadb
+
+I.E: docker commit c854772b3dc3 bob/bob-r-notebook-base:libmariadb 
+
+
+4) Docker image with R packages
+
+docker build -f Dockerfile-bob-r-notebook -t bob/bob-r-notebook:run .

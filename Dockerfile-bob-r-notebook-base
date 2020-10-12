@@ -1,0 +1,19 @@
+# Step 1:
+# Create my own Docker image r-notebook-base  from jupyter/r-notebook
+
+
+FROM jupyter/r-notebook
+
+USER root
+
+RUN apt-get update 
+
+# RUN apt-get install -y libmariadb-client-lgpl-dev
+
+# The following is needed for data.table installation
+RUN apt-get install -y zlib1g-dev
+
+
+# Run this file to create Docker image  (the period in the end is mandatory):
+# docker build -f Dockerfile-bob-r-notebook-base -t bob/bob-r-notebook-base:base .
+ 
