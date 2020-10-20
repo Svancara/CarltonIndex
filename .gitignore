@@ -1,3 +1,5 @@
 .ipynb_checkpoints
 .vscode
 docker-stacks-master
+startJupyter.bat
+startJupyterInWSL2.sh
