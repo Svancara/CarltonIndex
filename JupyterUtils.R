@@ -33,7 +33,7 @@ openDb = function() {
 
 
 openC2Db = function() {
-  dbConnect(MySQL(),user = "bob",password = Sys.getenv("MySqlC2PasswordBob"), dbname = "collective2",host = "homonea.collective2.com")
+  dbConnect(MySQL(),user = Sys.getenv("MySqlC2Login"),password = Sys.getenv("MySqlC2Password"), dbname = Sys.getenv("MySqlC2Dbname"),host =  Sys.getenv("MySqlC2Host"))
 }
 
 
