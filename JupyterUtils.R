@@ -171,5 +171,14 @@ carltonResults = function(){
 }
 
 
+getC2DbData = function(sqlcommand) {
+  con <- openC2Db()
+  suppressWarnings( data <- dbGetQuery(con, sqlcommand) )
+  dbDisconnect(con)
+  return (data)
+}
+
+
 # ------------- Sourcing message ----------------
-print("Initialization done")
+# print("Initialization done")
+
