@@ -14,11 +14,11 @@ getLeveragedataStats = function(){
   
   levMaxSql = "select count(distinct(systemid)) as Count from leverage_max_daily"   
   suppressWarnings( levMax_SystemsCount <- dbGetQuery(con, levMaxSql) )
-  cat(sprintf("A number of systems in 'leverage_max_daily': %d\n", levMax_SystemsCount$Count))
+  cat(sprintf("A number of systems in the 'leverage_max_daily' table: %d\n", levMax_SystemsCount$Count))
   
   levWeightedSql = "select count(distinct(systemid)) as Count from leverage_weighted_max_daily"
   suppressWarnings( levWeighted_SystemsCount <- dbGetQuery(con, levWeightedSql) )
-  cat(sprintf("A number of systems in 'leverage_weighted_max_daily': %d\n", levWeighted_SystemsCount$Count))
+  cat(sprintf("A number of systems in the 'leverage_weighted_max_daily' table: %d\n", levWeighted_SystemsCount$Count))
   
   levMaxSqlSystems = "select distinct(systemid) as SystemId from leverage_max_daily"   
   suppressWarnings( levMaxSystems <- dbGetQuery(con, levMaxSqlSystems) )
@@ -30,7 +30,7 @@ getLeveragedataStats = function(){
   
   inter = intersect(levMaxSystems$SystemId, levWeightedSystems$SystemId)
   #  print(length(inter))
-  cat( sprintf("A number of systems in intersection: %d\n", length(inter) ))
+  cat( sprintf("A number of systems in the intersection: %d\n", length(inter) ))
 
   diff = setdiff(levMaxSystems$SystemId, levWeightedSystems$SystemId)
   cat( sprintf("Systems in 'leverage_max_daily' not found in 'leverage_weighted_max_daily': %d\n", length(diff) ))
