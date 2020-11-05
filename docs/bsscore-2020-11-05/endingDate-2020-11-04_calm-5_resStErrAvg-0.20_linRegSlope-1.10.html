@@ -1,0 +1,1009 @@
+
+    <html>
+    <head>
+     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>BSScore debugging</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+}
+</style>
+        </head>
+        <body>
+        <p><h2>Calculated for 2020-11-04</h2> 
+                   <table><row><td><p> Selection params: </p> 
+                    <p> Calmar >= 5 </p> 
+                    <p> Linear regression residuals standard error adjusted &le; 0.20 </p> 
+                    <p> Linear regression slope &ge; 1.10 </p> 
+                    <p> Equity can't fall under starting capital after statistics quarantine time</p> 
+                    <p> Ordered by scoreAdjusted desc</p> </td><td>
+  <p>Chart: </p>
+  <p>Red vertical line: A system quarantine.</p>
+  <p>Black vertical line: A statistics quarantine. We are waiting fore data allowing to use statistics.</p>
+  <p>Blue horizontal line: Starting capital. (The first equity value actually.)</p>
+  <p>Quarantine = 3 months (60 trading days)</p> 
+  <p> Statistics quarantine = 3 months (60 trading days)</p>   
+  </td></row></table></p>
+        <div>
+<table style="border-collapse:collapse;" class=table_6175 border=1>
+<thead>
+<tr>
+  <th id="tableHTML_header_1"> </th>
+  <th id="tableHTML_header_2">Chart</th>
+  <th id="tableHTML_header_3">Chart180</th>
+  <th id="tableHTML_header_4">systemid</th>
+  <th id="tableHTML_header_5">SystemName</th>
+  <th id="tableHTML_header_6">calmar</th>
+  <th id="tableHTML_header_7">score</th>
+  <th id="tableHTML_header_8">scoreAdjusted</th>
+  <th id="tableHTML_header_9">ResStErrAvg</th>
+  <th id="tableHTML_header_10">AgeDays</th>
+  <th id="tableHTML_header_11">Equity</th>
+  <th id="tableHTML_header_12">residualStandardError</th>
+  <th id="tableHTML_header_13">StartingCash</th>
+  <th id="tableHTML_header_14">MinEquity</th>
+  <th id="tableHTML_header_15">LinRegSlope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td id="tableHTML_rownames">1</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/128185559' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=128185559'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/128185559-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/128185559-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">128185559</td>
+  <td id="tableHTML_column_4">ZeroZ</td>
+  <td id="tableHTML_column_5">147.84067194</td>
+  <td id="tableHTML_column_6">37.0099943</td>
+  <td id="tableHTML_column_7">39.74255752</td>
+  <td id="tableHTML_column_8">0.049350712884</td>
+  <td id="tableHTML_column_9">226</td>
+  <td id="tableHTML_column_10">37403.69</td>
+  <td id="tableHTML_column_11">417.17312111</td>
+  <td id="tableHTML_column_12">16800</td>
+  <td id="tableHTML_column_13">35140.09</td>
+  <td id="tableHTML_column_14">1.19143574</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">2</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/128751974' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=128751974'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/128751974-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/128751974-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">128751974</td>
+  <td id="tableHTML_column_4">3Algo Futures</td>
+  <td id="tableHTML_column_5">37.67563547</td>
+  <td id="tableHTML_column_6">28.57710921</td>
+  <td id="tableHTML_column_7">34.26153267</td>
+  <td id="tableHTML_column_8">0.074984738655</td>
+  <td id="tableHTML_column_9">191</td>
+  <td id="tableHTML_column_10">77489.74</td>
+  <td id="tableHTML_column_11">1109.81464935</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">77180.13</td>
+  <td id="tableHTML_column_14">1.29658145</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">3</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/128013249' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=128013249'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/128013249-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/128013249-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">128013249</td>
+  <td id="tableHTML_column_4">Forex anticrisis system</td>
+  <td id="tableHTML_column_5">19.8018018</td>
+  <td id="tableHTML_column_6">17.10569114</td>
+  <td id="tableHTML_column_7">17.60514291</td>
+  <td id="tableHTML_column_8">0.052557344251</td>
+  <td id="tableHTML_column_9">237</td>
+  <td id="tableHTML_column_10">15386</td>
+  <td id="tableHTML_column_11">191.64940978</td>
+  <td id="tableHTML_column_12">10000</td>
+  <td id="tableHTML_column_13">14994</td>
+  <td id="tableHTML_column_14">1.13657353</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">4</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/127108876' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=127108876'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/127108876-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/127108876-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">127108876</td>
+  <td id="tableHTML_column_4">Star  NQ</td>
+  <td id="tableHTML_column_5">27.12101102</td>
+  <td id="tableHTML_column_6">14.16545524</td>
+  <td id="tableHTML_column_7">17.35086424</td>
+  <td id="tableHTML_column_8">0.052811106378</td>
+  <td id="tableHTML_column_9">288</td>
+  <td id="tableHTML_column_10">57910.41</td>
+  <td id="tableHTML_column_11">880.79409299</td>
+  <td id="tableHTML_column_12">36450</td>
+  <td id="tableHTML_column_13">52956.63</td>
+  <td id="tableHTML_column_14">1.15516125</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">5</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/128203378' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=128203378'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/128203378-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/128203378-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">128203378</td>
+  <td id="tableHTML_column_4">EFutrs Index</td>
+  <td id="tableHTML_column_5">13.46868433</td>
+  <td id="tableHTML_column_6">11.02969816</td>
+  <td id="tableHTML_column_7">13.33765504</td>
+  <td id="tableHTML_column_8">0.169939301593</td>
+  <td id="tableHTML_column_9">226</td>
+  <td id="tableHTML_column_10">56660.6</td>
+  <td id="tableHTML_column_11">2176.12299096</td>
+  <td id="tableHTML_column_12">36000</td>
+  <td id="tableHTML_column_13">54415.3</td>
+  <td id="tableHTML_column_14">1.10566102</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">6</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/122397210' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=122397210'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/122397210-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/122397210-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">122397210</td>
+  <td id="tableHTML_column_4">Futrs only</td>
+  <td id="tableHTML_column_5">43.31601976</td>
+  <td id="tableHTML_column_6">10.16813175</td>
+  <td id="tableHTML_column_7">12.50465207</td>
+  <td id="tableHTML_column_8">0.019997271122</td>
+  <td id="tableHTML_column_9">637</td>
+  <td id="tableHTML_column_10">62271.11</td>
+  <td id="tableHTML_column_11">793.22569582</td>
+  <td id="tableHTML_column_12">26093</td>
+  <td id="tableHTML_column_13">48243.63</td>
+  <td id="tableHTML_column_14">1.38971401</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">7</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/128731010' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=128731010'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/128731010-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/128731010-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">128731010</td>
+  <td id="tableHTML_column_4">Volatility Rider Pro</td>
+  <td id="tableHTML_column_5">11.36880249</td>
+  <td id="tableHTML_column_6">9.35077608</td>
+  <td id="tableHTML_column_7">12.12282464</td>
+  <td id="tableHTML_column_8">0.164922308207</td>
+  <td id="tableHTML_column_9">194</td>
+  <td id="tableHTML_column_10">79329.23</td>
+  <td id="tableHTML_column_11">2538.13298565</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">79329.23</td>
+  <td id="tableHTML_column_14">1.1956741</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">8</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/123458321' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=123458321'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/123458321-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/123458321-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">123458321</td>
+  <td id="tableHTML_column_4">ES DSXmes</td>
+  <td id="tableHTML_column_5">26.89261193</td>
+  <td id="tableHTML_column_6">10.98982039</td>
+  <td id="tableHTML_column_7">10.8861459</td>
+  <td id="tableHTML_column_8">0.045655972798</td>
+  <td id="tableHTML_column_9">555</td>
+  <td id="tableHTML_column_10">55579.23</td>
+  <td id="tableHTML_column_11">1408.32571623</td>
+  <td id="tableHTML_column_12">29160</td>
+  <td id="tableHTML_column_13">39940.08</td>
+  <td id="tableHTML_column_14">1.5063416</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">9</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/124994120' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=124994120'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/124994120-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/124994120-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">124994120</td>
+  <td id="tableHTML_column_4">ALPHA AI Master</td>
+  <td id="tableHTML_column_5">19.22211631</td>
+  <td id="tableHTML_column_6">8.43723221</td>
+  <td id="tableHTML_column_7">10.35271705</td>
+  <td id="tableHTML_column_8">0.066615625295</td>
+  <td id="tableHTML_column_9">443</td>
+  <td id="tableHTML_column_10">36095.29</td>
+  <td id="tableHTML_column_11">1065.1980689</td>
+  <td id="tableHTML_column_12">25000</td>
+  <td id="tableHTML_column_13">27333.2</td>
+  <td id="tableHTML_column_14">1.24317401</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">10</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/125587405' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=125587405'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/125587405-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/125587405-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">125587405</td>
+  <td id="tableHTML_column_4">stock   star</td>
+  <td id="tableHTML_column_5">18.53903871</td>
+  <td id="tableHTML_column_6">11.19529002</td>
+  <td id="tableHTML_column_7">10.17654481</td>
+  <td id="tableHTML_column_8">0.105031431392</td>
+  <td id="tableHTML_column_9">399</td>
+  <td id="tableHTML_column_10">23374.02</td>
+  <td id="tableHTML_column_11">979.54770442</td>
+  <td id="tableHTML_column_12">10000</td>
+  <td id="tableHTML_column_13">20979.7</td>
+  <td id="tableHTML_column_14">1.46761099</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">11</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/128133665' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=128133665'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/128133665-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/128133665-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">128133665</td>
+  <td id="tableHTML_column_4">Long only Stock and ETF</td>
+  <td id="tableHTML_column_5">14.82287894</td>
+  <td id="tableHTML_column_6">7.20136682</td>
+  <td id="tableHTML_column_7">8.51979445</td>
+  <td id="tableHTML_column_8">0.100003252603</td>
+  <td id="tableHTML_column_9">225</td>
+  <td id="tableHTML_column_10">103777.94</td>
+  <td id="tableHTML_column_11">2335.07959841</td>
+  <td id="tableHTML_column_12">70000</td>
+  <td id="tableHTML_column_13">98921.94</td>
+  <td id="tableHTML_column_14">1.10986671</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">12</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/127785245' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=127785245'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/127785245-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/127785245-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">127785245</td>
+  <td id="tableHTML_column_4">Positronic Capital</td>
+  <td id="tableHTML_column_5">7.89879708</td>
+  <td id="tableHTML_column_6">7.29500316</td>
+  <td id="tableHTML_column_7">8.0866388</td>
+  <td id="tableHTML_column_8">0.124177199198</td>
+  <td id="tableHTML_column_9">249</td>
+  <td id="tableHTML_column_10">62708.55</td>
+  <td id="tableHTML_column_11">1938.95605409</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">60042.12</td>
+  <td id="tableHTML_column_14">1.14256792</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">13</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/126444124' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=126444124'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/126444124-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/126444124-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">126444124</td>
+  <td id="tableHTML_column_4">Substrate AI - US ETF</td>
+  <td id="tableHTML_column_5">9.355731</td>
+  <td id="tableHTML_column_6">6.46789819</td>
+  <td id="tableHTML_column_7">8.06874332</td>
+  <td id="tableHTML_column_8">0.15507396345</td>
+  <td id="tableHTML_column_9">338</td>
+  <td id="tableHTML_column_10">69559.86</td>
+  <td id="tableHTML_column_11">3645.98003728</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">64295.25</td>
+  <td id="tableHTML_column_14">1.71875561</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">14</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/125401215' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=125401215'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/125401215-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/125401215-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">125401215</td>
+  <td id="tableHTML_column_4">Misti</td>
+  <td id="tableHTML_column_5">9.40391917</td>
+  <td id="tableHTML_column_6">6.19923146</td>
+  <td id="tableHTML_column_7">6.33786457</td>
+  <td id="tableHTML_column_8">0.069747551929</td>
+  <td id="tableHTML_column_9">413</td>
+  <td id="tableHTML_column_10">35737.62</td>
+  <td id="tableHTML_column_11">1029.44855229</td>
+  <td id="tableHTML_column_12">25000</td>
+  <td id="tableHTML_column_13">28194.17</td>
+  <td id="tableHTML_column_14">1.43078528</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">15</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/128551067' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=128551067'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/128551067-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/128551067-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">128551067</td>
+  <td id="tableHTML_column_4">T One</td>
+  <td id="tableHTML_column_5">12.58338718</td>
+  <td id="tableHTML_column_6">5.3942444</td>
+  <td id="tableHTML_column_7">5.84526813</td>
+  <td id="tableHTML_column_8">0.106861092077</td>
+  <td id="tableHTML_column_9">204</td>
+  <td id="tableHTML_column_10">35638.04</td>
+  <td id="tableHTML_column_11">776.89725427</td>
+  <td id="tableHTML_column_12">25000</td>
+  <td id="tableHTML_column_13">34534.63</td>
+  <td id="tableHTML_column_14">1.17070823</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">16</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/128415506' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=128415506'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/128415506-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/128415506-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">128415506</td>
+  <td id="tableHTML_column_4">ALPS 1</td>
+  <td id="tableHTML_column_5">10.26990106</td>
+  <td id="tableHTML_column_6">5.12438805</td>
+  <td id="tableHTML_column_7">5.47663192</td>
+  <td id="tableHTML_column_8">0.195701168813</td>
+  <td id="tableHTML_column_9">198</td>
+  <td id="tableHTML_column_10">501345.76</td>
+  <td id="tableHTML_column_11">19426.5623399</td>
+  <td id="tableHTML_column_12">3e+05</td>
+  <td id="tableHTML_column_13">441446.76</td>
+  <td id="tableHTML_column_14">1.39786582</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">17</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/128310623' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=128310623'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/128310623-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/128310623-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">128310623</td>
+  <td id="tableHTML_column_4">DASH STOCKS</td>
+  <td id="tableHTML_column_5">5.95406571</td>
+  <td id="tableHTML_column_6">4.8232505</td>
+  <td id="tableHTML_column_7">4.84593983</td>
+  <td id="tableHTML_column_8">0.173915979188</td>
+  <td id="tableHTML_column_9">219</td>
+  <td id="tableHTML_column_10">78279.65</td>
+  <td id="tableHTML_column_11">2981.48395368</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">67304.26</td>
+  <td id="tableHTML_column_14">1.17272781</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">18</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/123479706' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=123479706'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/123479706-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/123479706-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">123479706</td>
+  <td id="tableHTML_column_4">NEURAL STARK STRATEGY</td>
+  <td id="tableHTML_column_5">13.98271072</td>
+  <td id="tableHTML_column_6">3.7198014</td>
+  <td id="tableHTML_column_7">4.82723733</td>
+  <td id="tableHTML_column_8">0.038864004748</td>
+  <td id="tableHTML_column_9">554</td>
+  <td id="tableHTML_column_10">79014.9</td>
+  <td id="tableHTML_column_11">1701.2428386</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">58931.41</td>
+  <td id="tableHTML_column_14">1.39960496</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">19</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/123007535' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=123007535'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/123007535-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/123007535-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">123007535</td>
+  <td id="tableHTML_column_4">favour etf</td>
+  <td id="tableHTML_column_5">11.78473942</td>
+  <td id="tableHTML_column_6">4.61005977</td>
+  <td id="tableHTML_column_7">4.6877486</td>
+  <td id="tableHTML_column_8">0.078508407457</td>
+  <td id="tableHTML_column_9">594</td>
+  <td id="tableHTML_column_10">78903.78</td>
+  <td id="tableHTML_column_11">3679.5984054</td>
+  <td id="tableHTML_column_12">40000</td>
+  <td id="tableHTML_column_13">43524.28</td>
+  <td id="tableHTML_column_14">1.93780444</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">20</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/123909762' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=123909762'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/123909762-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/123909762-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">123909762</td>
+  <td id="tableHTML_column_4">Volatility Rider</td>
+  <td id="tableHTML_column_5">10.73415086</td>
+  <td id="tableHTML_column_6">3.83546352</td>
+  <td id="tableHTML_column_7">4.66577912</td>
+  <td id="tableHTML_column_8">0.108585836987</td>
+  <td id="tableHTML_column_9">520</td>
+  <td id="tableHTML_column_10">103246.43</td>
+  <td id="tableHTML_column_11">5829.77200909</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">66416.62</td>
+  <td id="tableHTML_column_14">1.76051267</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">21</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/127764619' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=127764619'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/127764619-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/127764619-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">127764619</td>
+  <td id="tableHTML_column_4">The ACE</td>
+  <td id="tableHTML_column_5">8.7576727</td>
+  <td id="tableHTML_column_6">4.73247634</td>
+  <td id="tableHTML_column_7">4.32545097</td>
+  <td id="tableHTML_column_8">0.114127549385</td>
+  <td id="tableHTML_column_9">250</td>
+  <td id="tableHTML_column_10">98551.93</td>
+  <td id="tableHTML_column_11">2811.87256451</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">87630.13</td>
+  <td id="tableHTML_column_14">1.28228995</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">22</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/125428941' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=125428941'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/125428941-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/125428941-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">125428941</td>
+  <td id="tableHTML_column_4">Clear Futures</td>
+  <td id="tableHTML_column_5">10.38751363</td>
+  <td id="tableHTML_column_6">2.88244053</td>
+  <td id="tableHTML_column_7">3.80863053</td>
+  <td id="tableHTML_column_8">0.078664242247</td>
+  <td id="tableHTML_column_9">411</td>
+  <td id="tableHTML_column_10">68599.14</td>
+  <td id="tableHTML_column_11">2217.87903979</td>
+  <td id="tableHTML_column_12">30000</td>
+  <td id="tableHTML_column_13">47308.42</td>
+  <td id="tableHTML_column_14">1.62205344</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">23</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/124283622' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=124283622'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/124283622-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/124283622-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">124283622</td>
+  <td id="tableHTML_column_4">AGRI YM</td>
+  <td id="tableHTML_column_5">22.39462034</td>
+  <td id="tableHTML_column_6">2.74667592</td>
+  <td id="tableHTML_column_7">3.66653562</td>
+  <td id="tableHTML_column_8">0.029487675497</td>
+  <td id="tableHTML_column_9">492</td>
+  <td id="tableHTML_column_10">54832.78</td>
+  <td id="tableHTML_column_11">795.51048184</td>
+  <td id="tableHTML_column_12">34000</td>
+  <td id="tableHTML_column_13">44111.32</td>
+  <td id="tableHTML_column_14">1.29889245</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">24</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/104952602' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=104952602'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/104952602-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/104952602-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">104952602</td>
+  <td id="tableHTML_column_4">VIX Tactical Trader</td>
+  <td id="tableHTML_column_5">10.57545545</td>
+  <td id="tableHTML_column_6">2.88359345</td>
+  <td id="tableHTML_column_7">3.59548419</td>
+  <td id="tableHTML_column_8">0.030491002371</td>
+  <td id="tableHTML_column_9">1433</td>
+  <td id="tableHTML_column_10">40901.42</td>
+  <td id="tableHTML_column_11">1787.13054661</td>
+  <td id="tableHTML_column_12">10000</td>
+  <td id="tableHTML_column_13">14966.64</td>
+  <td id="tableHTML_column_14">2.65190509</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">25</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/117734561' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=117734561'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/117734561-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/117734561-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">117734561</td>
+  <td id="tableHTML_column_4">TQQQ Trader</td>
+  <td id="tableHTML_column_5">7.68963231</td>
+  <td id="tableHTML_column_6">2.8450672</td>
+  <td id="tableHTML_column_7">3.42352559</td>
+  <td id="tableHTML_column_8">0.062371924296</td>
+  <td id="tableHTML_column_9">918</td>
+  <td id="tableHTML_column_10">57749.6</td>
+  <td id="tableHTML_column_11">3306.59347761</td>
+  <td id="tableHTML_column_12">20000</td>
+  <td id="tableHTML_column_13">21939.65</td>
+  <td id="tableHTML_column_14">1.75294832</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">26</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/106187009' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=106187009'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/106187009-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/106187009-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">106187009</td>
+  <td id="tableHTML_column_4">Dual QM18</td>
+  <td id="tableHTML_column_5">6.58340493</td>
+  <td id="tableHTML_column_6">2.46635608</td>
+  <td id="tableHTML_column_7">3.10881235</td>
+  <td id="tableHTML_column_8">0.050916469761</td>
+  <td id="tableHTML_column_9">1493</td>
+  <td id="tableHTML_column_10">77086.01</td>
+  <td id="tableHTML_column_11">5859.94661324</td>
+  <td id="tableHTML_column_12">25000</td>
+  <td id="tableHTML_column_13">30892.69</td>
+  <td id="tableHTML_column_14">2.23167289</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">27</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/128022277' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=128022277'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/128022277-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/128022277-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">128022277</td>
+  <td id="tableHTML_column_4">Seek Alpha</td>
+  <td id="tableHTML_column_5">6.6087183</td>
+  <td id="tableHTML_column_6">4.2657246</td>
+  <td id="tableHTML_column_7">3.01641422</td>
+  <td id="tableHTML_column_8">0.18726142069</td>
+  <td id="tableHTML_column_9">236</td>
+  <td id="tableHTML_column_10">31597.67</td>
+  <td id="tableHTML_column_11">1396.41779963</td>
+  <td id="tableHTML_column_12">18000</td>
+  <td id="tableHTML_column_13">30128.77</td>
+  <td id="tableHTML_column_14">1.11582159</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">28</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/125624499' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=125624499'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/125624499-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/125624499-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">125624499</td>
+  <td id="tableHTML_column_4">dow m</td>
+  <td id="tableHTML_column_5">18.94805175</td>
+  <td id="tableHTML_column_6">2.38096532</td>
+  <td id="tableHTML_column_7">3.01058363</td>
+  <td id="tableHTML_column_8">0.074995937365</td>
+  <td id="tableHTML_column_9">397</td>
+  <td id="tableHTML_column_10">50452.03</td>
+  <td id="tableHTML_column_11">1502.12782088</td>
+  <td id="tableHTML_column_12">32400</td>
+  <td id="tableHTML_column_13">44494.45</td>
+  <td id="tableHTML_column_14">1.32685221</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">29</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/122867565' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=122867565'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/122867565-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/122867565-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">122867565</td>
+  <td id="tableHTML_column_4">SP 500 eMini 2 contracts</td>
+  <td id="tableHTML_column_5">5.03193528</td>
+  <td id="tableHTML_column_6">2.49813017</td>
+  <td id="tableHTML_column_7">3.00572538</td>
+  <td id="tableHTML_column_8">0.086616294081</td>
+  <td id="tableHTML_column_9">604</td>
+  <td id="tableHTML_column_10">47270</td>
+  <td id="tableHTML_column_11">2472.98874161</td>
+  <td id="tableHTML_column_12">25000</td>
+  <td id="tableHTML_column_13">36870</td>
+  <td id="tableHTML_column_14">1.85428058</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">30</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/123562056' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=123562056'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/123562056-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/123562056-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">123562056</td>
+  <td id="tableHTML_column_4">NASDAQ Mc</td>
+  <td id="tableHTML_column_5">15.22451498</td>
+  <td id="tableHTML_column_6">2.24729649</td>
+  <td id="tableHTML_column_7">2.91577625</td>
+  <td id="tableHTML_column_8">0.139183330334</td>
+  <td id="tableHTML_column_9">547</td>
+  <td id="tableHTML_column_10">75248.84</td>
+  <td id="tableHTML_column_11">5728.94113277</td>
+  <td id="tableHTML_column_12">29084</td>
+  <td id="tableHTML_column_13">39359.54</td>
+  <td id="tableHTML_column_14">1.71825153</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">31</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/127924250' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=127924250'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/127924250-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/127924250-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">127924250</td>
+  <td id="tableHTML_column_4">Alpha Capital Compound</td>
+  <td id="tableHTML_column_5">8.63045685</td>
+  <td id="tableHTML_column_6">2.81121986</td>
+  <td id="tableHTML_column_7">2.88423113</td>
+  <td id="tableHTML_column_8">0.118019344891</td>
+  <td id="tableHTML_column_9">240</td>
+  <td id="tableHTML_column_10">106509.59</td>
+  <td id="tableHTML_column_11">3016.84608874</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">78227.33</td>
+  <td id="tableHTML_column_14">1.55855979</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">32</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/106600099' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=106600099'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/106600099-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/106600099-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">106600099</td>
+  <td id="tableHTML_column_4">VIXTrader Professional</td>
+  <td id="tableHTML_column_5">6.71979396</td>
+  <td id="tableHTML_column_6">2.13185823</td>
+  <td id="tableHTML_column_7">2.7801456</td>
+  <td id="tableHTML_column_8">0.048969888501</td>
+  <td id="tableHTML_column_9">1474</td>
+  <td id="tableHTML_column_10">101259.5</td>
+  <td id="tableHTML_column_11">7309.07430997</td>
+  <td id="tableHTML_column_12">25000</td>
+  <td id="tableHTML_column_13">38969.96</td>
+  <td id="tableHTML_column_14">3.07900308</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">33</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/124190857' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=124190857'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/124190857-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/124190857-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">124190857</td>
+  <td id="tableHTML_column_4">ES No Guts No Glory</td>
+  <td id="tableHTML_column_5">5.48360242</td>
+  <td id="tableHTML_column_6">2.64470071</td>
+  <td id="tableHTML_column_7">2.76524674</td>
+  <td id="tableHTML_column_8">0.111080611636</td>
+  <td id="tableHTML_column_9">501</td>
+  <td id="tableHTML_column_10">61679.56</td>
+  <td id="tableHTML_column_11">3432.55302836</td>
+  <td id="tableHTML_column_12">25000</td>
+  <td id="tableHTML_column_13">30136</td>
+  <td id="tableHTML_column_14">1.50823193</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">34</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/123163369' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=123163369'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/123163369-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/123163369-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">123163369</td>
+  <td id="tableHTML_column_4">Managed Vol Fund</td>
+  <td id="tableHTML_column_5">6.89721964</td>
+  <td id="tableHTML_column_6">2.06649908</td>
+  <td id="tableHTML_column_7">2.66522984</td>
+  <td id="tableHTML_column_8">0.053872009746</td>
+  <td id="tableHTML_column_9">582</td>
+  <td id="tableHTML_column_10">266930.47</td>
+  <td id="tableHTML_column_11">8369.20707297</td>
+  <td id="tableHTML_column_12">200129</td>
+  <td id="tableHTML_column_13">203641.34</td>
+  <td id="tableHTML_column_14">1.3535842</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">35</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/102427283' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=102427283'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/102427283-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/102427283-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">102427283</td>
+  <td id="tableHTML_column_4">Smart Volatility Margin</td>
+  <td id="tableHTML_column_5">6.04929093</td>
+  <td id="tableHTML_column_6">2.31546843</td>
+  <td id="tableHTML_column_7">2.65849495</td>
+  <td id="tableHTML_column_8">0.06229806584</td>
+  <td id="tableHTML_column_9">1631</td>
+  <td id="tableHTML_column_10">162350.87</td>
+  <td id="tableHTML_column_11">16496.17080245</td>
+  <td id="tableHTML_column_12">22709</td>
+  <td id="tableHTML_column_13">37575.33</td>
+  <td id="tableHTML_column_14">3.18233506</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">36</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/116569503' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=116569503'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/116569503-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/116569503-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">116569503</td>
+  <td id="tableHTML_column_4">FOREX SWING SYSTEM</td>
+  <td id="tableHTML_column_5">8.31280758</td>
+  <td id="tableHTML_column_6">2.07052207</td>
+  <td id="tableHTML_column_7">2.55714974</td>
+  <td id="tableHTML_column_8">0.027231956646</td>
+  <td id="tableHTML_column_9">992</td>
+  <td id="tableHTML_column_10">405399</td>
+  <td id="tableHTML_column_11">10951.48952853</td>
+  <td id="tableHTML_column_12">250000</td>
+  <td id="tableHTML_column_13">283184</td>
+  <td id="tableHTML_column_14">1.62598407</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">37</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/121522141' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=121522141'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/121522141-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/121522141-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">121522141</td>
+  <td id="tableHTML_column_4">QuanTrader</td>
+  <td id="tableHTML_column_5">6.48666003</td>
+  <td id="tableHTML_column_6">1.8958155</td>
+  <td id="tableHTML_column_7">2.3744135</td>
+  <td id="tableHTML_column_8">0.113875645485</td>
+  <td id="tableHTML_column_9">688</td>
+  <td id="tableHTML_column_10">76230.58</td>
+  <td id="tableHTML_column_11">5972.3948742</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">50835.85</td>
+  <td id="tableHTML_column_14">1.21914564</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">38</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/81877382' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=81877382'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/81877382-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/81877382-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">81877382</td>
+  <td id="tableHTML_column_4">The Spirit of Nicolas Darvas.</td>
+  <td id="tableHTML_column_5">6.43302219</td>
+  <td id="tableHTML_column_6">1.844211</td>
+  <td id="tableHTML_column_7">2.35485445</td>
+  <td id="tableHTML_column_8">0.029610351111</td>
+  <td id="tableHTML_column_9">2677</td>
+  <td id="tableHTML_column_10">610196.6</td>
+  <td id="tableHTML_column_11">48368.39892884</td>
+  <td id="tableHTML_column_12">1e+05</td>
+  <td id="tableHTML_column_13">132520.7</td>
+  <td id="tableHTML_column_14">4.60456233</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">39</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/106901765' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=106901765'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/106901765-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/106901765-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">106901765</td>
+  <td id="tableHTML_column_4">VIXTrader</td>
+  <td id="tableHTML_column_5">7.87042553</td>
+  <td id="tableHTML_column_6">1.75704498</td>
+  <td id="tableHTML_column_7">2.33005801</td>
+  <td id="tableHTML_column_8">0.032981314647</td>
+  <td id="tableHTML_column_9">1462</td>
+  <td id="tableHTML_column_10">85051.36</td>
+  <td id="tableHTML_column_11">4101.06448267</td>
+  <td id="tableHTML_column_12">25000</td>
+  <td id="tableHTML_column_13">39271.89</td>
+  <td id="tableHTML_column_14">2.31554935</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">40</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/121872737' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=121872737'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/121872737-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/121872737-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">121872737</td>
+  <td id="tableHTML_column_4">Aggressive Trend Scalper</td>
+  <td id="tableHTML_column_5">6.35660615</td>
+  <td id="tableHTML_column_6">1.86332542</td>
+  <td id="tableHTML_column_7">2.28353627</td>
+  <td id="tableHTML_column_8">0.08127053077</td>
+  <td id="tableHTML_column_9">665</td>
+  <td id="tableHTML_column_10">115900</td>
+  <td id="tableHTML_column_11">6263.80425331</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">72553</td>
+  <td id="tableHTML_column_14">1.51601718</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">41</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/81128026' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=81128026'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/81128026-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/81128026-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">81128026</td>
+  <td id="tableHTML_column_4">Carma Stocks</td>
+  <td id="tableHTML_column_5">12.89558182</td>
+  <td id="tableHTML_column_6">1.75108969</td>
+  <td id="tableHTML_column_7">2.22175208</td>
+  <td id="tableHTML_column_8">0.016760444678</td>
+  <td id="tableHTML_column_9">2717</td>
+  <td id="tableHTML_column_10">52628.03</td>
+  <td id="tableHTML_column_11">2396.58197656</td>
+  <td id="tableHTML_column_12">20000</td>
+  <td id="tableHTML_column_13">23378.48</td>
+  <td id="tableHTML_column_14">2.02558065</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">42</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/98996797' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=98996797'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/98996797-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/98996797-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">98996797</td>
+  <td id="tableHTML_column_4">WOversold</td>
+  <td id="tableHTML_column_5">9.14204261</td>
+  <td id="tableHTML_column_6">1.5391845</td>
+  <td id="tableHTML_column_7">2.0594405</td>
+  <td id="tableHTML_column_8">0.016960928599</td>
+  <td id="tableHTML_column_9">1767</td>
+  <td id="tableHTML_column_10">123108.3</td>
+  <td id="tableHTML_column_11">3689.55092935</td>
+  <td id="tableHTML_column_12">1e+05</td>
+  <td id="tableHTML_column_13">108751.06</td>
+  <td id="tableHTML_column_14">1.14570997</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">43</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/123071731' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=123071731'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/123071731-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/123071731-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">123071731</td>
+  <td id="tableHTML_column_4">MINI DOW 123071731</td>
+  <td id="tableHTML_column_5">12.71474164</td>
+  <td id="tableHTML_column_6">1.59054189</td>
+  <td id="tableHTML_column_7">2.01387099</td>
+  <td id="tableHTML_column_8">0.074225544096</td>
+  <td id="tableHTML_column_9">589</td>
+  <td id="tableHTML_column_10">59680.2</td>
+  <td id="tableHTML_column_11">2609.14944156</td>
+  <td id="tableHTML_column_12">31477</td>
+  <td id="tableHTML_column_13">42508.93</td>
+  <td id="tableHTML_column_14">1.37794663</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">44</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/124343595' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=124343595'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/124343595-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/124343595-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">124343595</td>
+  <td id="tableHTML_column_4">C2Star App SuperBands</td>
+  <td id="tableHTML_column_5">5.98599942</td>
+  <td id="tableHTML_column_6">1.48378632</td>
+  <td id="tableHTML_column_7">1.99760269</td>
+  <td id="tableHTML_column_8">0.067876517592</td>
+  <td id="tableHTML_column_9">488</td>
+  <td id="tableHTML_column_10">79666.05</td>
+  <td id="tableHTML_column_11">2638.83757364</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">66709.82</td>
+  <td id="tableHTML_column_14">1.40321159</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">45</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/106004078' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=106004078'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/106004078-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/106004078-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">106004078</td>
+  <td id="tableHTML_column_4">BlackAce</td>
+  <td id="tableHTML_column_5">7.95369443</td>
+  <td id="tableHTML_column_6">1.53186336</td>
+  <td id="tableHTML_column_7">1.96383723</td>
+  <td id="tableHTML_column_8">0.026995503239</td>
+  <td id="tableHTML_column_9">1505</td>
+  <td id="tableHTML_column_10">25404.1</td>
+  <td id="tableHTML_column_11">1032.12367807</td>
+  <td id="tableHTML_column_12">10000</td>
+  <td id="tableHTML_column_13">10830.6</td>
+  <td id="tableHTML_column_14">2.39699972</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">46</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/124696549' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=124696549'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/124696549-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/124696549-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">124696549</td>
+  <td id="tableHTML_column_4">4Timing Trend ML</td>
+  <td id="tableHTML_column_5">12.04780752</td>
+  <td id="tableHTML_column_6">1.59991677</td>
+  <td id="tableHTML_column_7">1.94586827</td>
+  <td id="tableHTML_column_8">0.039195953527</td>
+  <td id="tableHTML_column_9">462</td>
+  <td id="tableHTML_column_10">293895.06</td>
+  <td id="tableHTML_column_11">5322.00766652</td>
+  <td id="tableHTML_column_12">250000</td>
+  <td id="tableHTML_column_13">258655.79</td>
+  <td id="tableHTML_column_14">1.22099147</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">47</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/98995198' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=98995198'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/98995198-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/98995198-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">98995198</td>
+  <td id="tableHTML_column_4">Portfolio Trader PRO</td>
+  <td id="tableHTML_column_5">5.76599934</td>
+  <td id="tableHTML_column_6">1.51400031</td>
+  <td id="tableHTML_column_7">1.91827635</td>
+  <td id="tableHTML_column_8">0.021486403448</td>
+  <td id="tableHTML_column_9">1768</td>
+  <td id="tableHTML_column_10">154373.85</td>
+  <td id="tableHTML_column_11">5864.34783902</td>
+  <td id="tableHTML_column_12">1e+05</td>
+  <td id="tableHTML_column_13">102669.81</td>
+  <td id="tableHTML_column_14">1.42760745</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">48</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/126548162' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=126548162'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/126548162-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/126548162-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">126548162</td>
+  <td id="tableHTML_column_4">NASDAQ Momentum</td>
+  <td id="tableHTML_column_5">10.47298614</td>
+  <td id="tableHTML_column_6">1.46913395</td>
+  <td id="tableHTML_column_7">1.78739296</td>
+  <td id="tableHTML_column_8">0.077314151303</td>
+  <td id="tableHTML_column_9">331</td>
+  <td id="tableHTML_column_10">67828.19</td>
+  <td id="tableHTML_column_11">1735.79013056</td>
+  <td id="tableHTML_column_12">50000</td>
+  <td id="tableHTML_column_13">64876.1</td>
+  <td id="tableHTML_column_14">1.1379561</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">49</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/75976336' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=75976336'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/75976336-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/75976336-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">75976336</td>
+  <td id="tableHTML_column_4">SP100 Short Term Swing</td>
+  <td id="tableHTML_column_5">8.82770738</td>
+  <td id="tableHTML_column_6">1.42766928</td>
+  <td id="tableHTML_column_7">1.78670007</td>
+  <td id="tableHTML_column_8">0.014815793054</td>
+  <td id="tableHTML_column_9">3004</td>
+  <td id="tableHTML_column_10">299152.2</td>
+  <td id="tableHTML_column_11">13314.25996911</td>
+  <td id="tableHTML_column_12">1e+05</td>
+  <td id="tableHTML_column_13">111774.85</td>
+  <td id="tableHTML_column_14">2.39312434</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">50</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/127328382' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=127328382'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/127328382-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/127328382-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">127328382</td>
+  <td id="tableHTML_column_4">EMNQ Trader</td>
+  <td id="tableHTML_column_5">12.30196331</td>
+  <td id="tableHTML_column_6">1.32953694</td>
+  <td id="tableHTML_column_7">1.72067982</td>
+  <td id="tableHTML_column_8">0.067449395053</td>
+  <td id="tableHTML_column_9">275</td>
+  <td id="tableHTML_column_10">53598.67</td>
+  <td id="tableHTML_column_11">994.17941346</td>
+  <td id="tableHTML_column_12">36000</td>
+  <td id="tableHTML_column_13">46004.55</td>
+  <td id="tableHTML_column_14">1.12546565</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">51</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/106804598' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=106804598'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/106804598-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/106804598-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">106804598</td>
+  <td id="tableHTML_column_4">Dual Leverage</td>
+  <td id="tableHTML_column_5">5.9089772</td>
+  <td id="tableHTML_column_6">1.26891769</td>
+  <td id="tableHTML_column_7">1.59886497</td>
+  <td id="tableHTML_column_8">0.058740742414</td>
+  <td id="tableHTML_column_9">1465</td>
+  <td id="tableHTML_column_10">95998.13</td>
+  <td id="tableHTML_column_11">8261.13708986</td>
+  <td id="tableHTML_column_12">25000</td>
+  <td id="tableHTML_column_13">37176.55</td>
+  <td id="tableHTML_column_14">2.82251763</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">52</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/105498828' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=105498828'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/105498828-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/105498828-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">105498828</td>
+  <td id="tableHTML_column_4">4QTiming NDX3x</td>
+  <td id="tableHTML_column_5">5.07514184</td>
+  <td id="tableHTML_column_6">0.96405902</td>
+  <td id="tableHTML_column_7">1.25362391</td>
+  <td id="tableHTML_column_8">0.051447348951</td>
+  <td id="tableHTML_column_9">1450</td>
+  <td id="tableHTML_column_10">34243.2</td>
+  <td id="tableHTML_column_11">2554.49669641</td>
+  <td id="tableHTML_column_12">10000</td>
+  <td id="tableHTML_column_13">14021.88</td>
+  <td id="tableHTML_column_14">1.76025565</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">53</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/124463618' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=124463618'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/124463618-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/124463618-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">124463618</td>
+  <td id="tableHTML_column_4">Risk On - Risk Off</td>
+  <td id="tableHTML_column_5">6.7418487</td>
+  <td id="tableHTML_column_6">0.84004227</td>
+  <td id="tableHTML_column_7">1.13248649</td>
+  <td id="tableHTML_column_8">0.066575544314</td>
+  <td id="tableHTML_column_9">478</td>
+  <td id="tableHTML_column_10">34783.22</td>
+  <td id="tableHTML_column_11">1106.91024254</td>
+  <td id="tableHTML_column_12">25000</td>
+  <td id="tableHTML_column_13">26748.52</td>
+  <td id="tableHTML_column_14">1.35674816</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">54</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/13202557' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=13202557'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/13202557-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/13202557-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">13202557</td>
+  <td id="tableHTML_column_4">extreme-os</td>
+  <td id="tableHTML_column_5">5.12574222</td>
+  <td id="tableHTML_column_6">0.76901329</td>
+  <td id="tableHTML_column_7">1.0193072</td>
+  <td id="tableHTML_column_8">0.010537582036</td>
+  <td id="tableHTML_column_9">5739</td>
+  <td id="tableHTML_column_10">580359.6</td>
+  <td id="tableHTML_column_11">35097.35319195</td>
+  <td id="tableHTML_column_12">10000</td>
+  <td id="tableHTML_column_13">16087.07</td>
+  <td id="tableHTML_column_14">35.65686669</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">55</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/126907786' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=126907786'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/126907786-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/126907786-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">126907786</td>
+  <td id="tableHTML_column_4">FuguSTM</td>
+  <td id="tableHTML_column_5">6.79324591</td>
+  <td id="tableHTML_column_6">7.32541808</td>
+  <td id="tableHTML_column_7">-15.57683821</td>
+  <td id="tableHTML_column_8">0.064801315874</td>
+  <td id="tableHTML_column_9">301</td>
+  <td id="tableHTML_column_10">113454</td>
+  <td id="tableHTML_column_11">2212.94251583</td>
+  <td id="tableHTML_column_12">1e+05</td>
+  <td id="tableHTML_column_13">113454</td>
+  <td id="tableHTML_column_14">1.1603544</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">56</td>
+  <td id="tableHTML_column_1"><p>Today's C2 chart</p><a href='https://collective2.com/details/127235582' target='_blank'><img src='https://collective2.com/cgi-perl/xcharts200.mpl?want=nft&width=200&height=150&systemid=127235582'/></a></td>
+  <td id="tableHTML_column_2"><a href='./pictures_bsscore/127235582-enddate-2020-11-04-statgap-90.png'><img src='./pictures_bsscore/127235582-enddate-2020-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_3">127235582</td>
+  <td id="tableHTML_column_4">Intrepid Market Timing</td>
+  <td id="tableHTML_column_5">38.17253521</td>
+  <td id="tableHTML_column_6">36.15309615</td>
+  <td id="tableHTML_column_7">-43.44536637</td>
+  <td id="tableHTML_column_8">0.107084358042</td>
+  <td id="tableHTML_column_9">282</td>
+  <td id="tableHTML_column_10">10841</td>
+  <td id="tableHTML_column_11">327.3742302</td>
+  <td id="tableHTML_column_12">10000</td>
+  <td id="tableHTML_column_13">10715.5</td>
+  <td id="tableHTML_column_14">1.18839463</td>
+</tr>
+</tbody>
+</table></div>
+        </body>
+        </html>
+  

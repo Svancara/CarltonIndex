@@ -1,0 +1,360 @@
+
+    <html>
+    <head>
+     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>BSScore debugging</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+}
+</style>
+        </head>
+        <body>
+        <p><h2>Calculated for 2019-11-04</h2> 
+                   <table><row><td><p> Selection params: </p> 
+                    <p> Calmar >= 6 </p> 
+                    <p> Linear regression residuals standard error adjusted &le; 0.10 </p> 
+                    <p> Linear regression slope &ge; 1.10 </p> 
+                    <p> Equity can't fall under starting capital after statistics quarantine time</p> 
+                    <p> Ordered by scoreAdjusted desc</p> </td><td>
+  <p>Chart: </p>
+  <p>Red vertical line: A system quarantine.</p>
+  <p>Black vertical line: A statistics quarantine. We are waiting fore data allowing to use statistics.</p>
+  <p>Blue horizontal line: Starting capital. (The first equity value actually.)</p>
+  <p>Quarantine = 3 months (60 trading days)</p> 
+  <p> Statistics quarantine = 3 months (60 trading days)</p>   
+  </td></row></table></p>
+        <div>
+<table style="border-collapse:collapse;" class=table_8701 border=1>
+<thead>
+<tr>
+  <th id="tableHTML_header_1"> </th>
+  <th id="tableHTML_header_2">Chart180</th>
+  <th id="tableHTML_header_3">systemid</th>
+  <th id="tableHTML_header_4">SystemName</th>
+  <th id="tableHTML_header_5">calmar</th>
+  <th id="tableHTML_header_6">score</th>
+  <th id="tableHTML_header_7">scoreAdjusted</th>
+  <th id="tableHTML_header_8">ResStErrAvg</th>
+  <th id="tableHTML_header_9">AgeDays</th>
+  <th id="tableHTML_header_10">Equity</th>
+  <th id="tableHTML_header_11">residualStandardError</th>
+  <th id="tableHTML_header_12">StartingCash</th>
+  <th id="tableHTML_header_13">MinEquity</th>
+  <th id="tableHTML_header_14">LinRegSlope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td id="tableHTML_rownames">1</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/123139019-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/123139019-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">123139019</td>
+  <td id="tableHTML_column_3">The Candle SP 500</td>
+  <td id="tableHTML_column_4">23.08867277</td>
+  <td id="tableHTML_column_5">18.14083117</td>
+  <td id="tableHTML_column_6">23.97057527</td>
+  <td id="tableHTML_column_7">0.092272795945</td>
+  <td id="tableHTML_column_8">218</td>
+  <td id="tableHTML_column_9">60538.5</td>
+  <td id="tableHTML_column_10">1217.76035129</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">57991.5</td>
+  <td id="tableHTML_column_13">1.16114274</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">2</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/122397210-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/122397210-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">122397210</td>
+  <td id="tableHTML_column_3">Futrs only</td>
+  <td id="tableHTML_column_4">35.50697691</td>
+  <td id="tableHTML_column_5">21.81896819</td>
+  <td id="tableHTML_column_6">20.35009433</td>
+  <td id="tableHTML_column_7">0.036231700129</td>
+  <td id="tableHTML_column_8">271</td>
+  <td id="tableHTML_column_9">51044.83</td>
+  <td id="tableHTML_column_10">501.19850387</td>
+  <td id="tableHTML_column_11">26093</td>
+  <td id="tableHTML_column_12">48243.63</td>
+  <td id="tableHTML_column_13">1.17295888</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">3</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/122174758-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/122174758-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">122174758</td>
+  <td id="tableHTML_column_3">Small Ball</td>
+  <td id="tableHTML_column_4">13.65127295</td>
+  <td id="tableHTML_column_5">7.71172563</td>
+  <td id="tableHTML_column_6">9.04353948</td>
+  <td id="tableHTML_column_7">0.082333008113</td>
+  <td id="tableHTML_column_8">283</td>
+  <td id="tableHTML_column_9">65416.9</td>
+  <td id="tableHTML_column_10">1524.22955483</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">54369.9</td>
+  <td id="tableHTML_column_13">1.19978043</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">4</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/120610209-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/120610209-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">120610209</td>
+  <td id="tableHTML_column_3">International Value</td>
+  <td id="tableHTML_column_4">10.75122208</td>
+  <td id="tableHTML_column_5">3.13030423</td>
+  <td id="tableHTML_column_6">3.93547284</td>
+  <td id="tableHTML_column_7">0.07534325313</td>
+  <td id="tableHTML_column_8">370</td>
+  <td id="tableHTML_column_9">40798.2</td>
+  <td id="tableHTML_column_10">1137.33157064</td>
+  <td id="tableHTML_column_11">25000</td>
+  <td id="tableHTML_column_12">30001.5</td>
+  <td id="tableHTML_column_13">1.4974372</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">5</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/115023400-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/115023400-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">115023400</td>
+  <td id="tableHTML_column_3">Crude Oil Trader Z</td>
+  <td id="tableHTML_column_4">6.14315888</td>
+  <td id="tableHTML_column_5">3.02169146</td>
+  <td id="tableHTML_column_6">3.75041026</td>
+  <td id="tableHTML_column_7">0.085356856615</td>
+  <td id="tableHTML_column_8">709</td>
+  <td id="tableHTML_column_9">78528</td>
+  <td id="tableHTML_column_10">4752.35839449</td>
+  <td id="tableHTML_column_11">30000</td>
+  <td id="tableHTML_column_12">47897</td>
+  <td id="tableHTML_column_13">1.95455081</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">6</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/104155140-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/104155140-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">104155140</td>
+  <td id="tableHTML_column_3">ETF Leverage Reversal</td>
+  <td id="tableHTML_column_4">11.81130031</td>
+  <td id="tableHTML_column_5">2.94009818</td>
+  <td id="tableHTML_column_6">3.64621387</td>
+  <td id="tableHTML_column_7">0.041151556941</td>
+  <td id="tableHTML_column_8">1233</td>
+  <td id="tableHTML_column_9">80116.05</td>
+  <td id="tableHTML_column_10">4065.07793855</td>
+  <td id="tableHTML_column_11">25000</td>
+  <td id="tableHTML_column_12">26451.69</td>
+  <td id="tableHTML_column_13">2.54168741</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">7</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/104952602-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/104952602-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">104952602</td>
+  <td id="tableHTML_column_3">VIX Tactical Trader</td>
+  <td id="tableHTML_column_4">7.8652077</td>
+  <td id="tableHTML_column_5">2.58593176</td>
+  <td id="tableHTML_column_6">3.32017441</td>
+  <td id="tableHTML_column_7">0.055040368284</td>
+  <td id="tableHTML_column_8">1067</td>
+  <td id="tableHTML_column_9">30419.32</td>
+  <td id="tableHTML_column_10">1786.46804433</td>
+  <td id="tableHTML_column_11">10000</td>
+  <td id="tableHTML_column_12">14966.64</td>
+  <td id="tableHTML_column_13">2.23500598</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">8</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/116569503-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/116569503-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">116569503</td>
+  <td id="tableHTML_column_3">FOREX SWING SYSTEM</td>
+  <td id="tableHTML_column_4">14.85455009</td>
+  <td id="tableHTML_column_5">2.38133196</td>
+  <td id="tableHTML_column_6">3.20569708</td>
+  <td id="tableHTML_column_7">0.03845054568</td>
+  <td id="tableHTML_column_8">626</td>
+  <td id="tableHTML_column_9">349483</td>
+  <td id="tableHTML_column_10">8412.07034702</td>
+  <td id="tableHTML_column_11">250000</td>
+  <td id="tableHTML_column_12">283184</td>
+  <td id="tableHTML_column_13">1.38922219</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">9</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/77477692-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/77477692-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">77477692</td>
+  <td id="tableHTML_column_3">The Vegan Growth Port</td>
+  <td id="tableHTML_column_4">8.73189682</td>
+  <td id="tableHTML_column_5">2.24143466</td>
+  <td id="tableHTML_column_6">2.87193083</td>
+  <td id="tableHTML_column_7">0.031296570952</td>
+  <td id="tableHTML_column_8">2555</td>
+  <td id="tableHTML_column_9">339523.13</td>
+  <td id="tableHTML_column_10">27149.19935478</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">108663.03</td>
+  <td id="tableHTML_column_13">3.62682826</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">10</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/94987184-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/94987184-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">94987184</td>
+  <td id="tableHTML_column_3">Just Forex Trades</td>
+  <td id="tableHTML_column_4">9.3790201</td>
+  <td id="tableHTML_column_5">2.1124026</td>
+  <td id="tableHTML_column_6">2.62433916</td>
+  <td id="tableHTML_column_7">0.05770500365</td>
+  <td id="tableHTML_column_8">1605</td>
+  <td id="tableHTML_column_9">267424</td>
+  <td id="tableHTML_column_10">24767.88314821</td>
+  <td id="tableHTML_column_11">20000</td>
+  <td id="tableHTML_column_12">25643.5</td>
+  <td id="tableHTML_column_13">7.28873046</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">11</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/81128026-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/81128026-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">81128026</td>
+  <td id="tableHTML_column_3">Carma Stocks</td>
+  <td id="tableHTML_column_4">13.22578044</td>
+  <td id="tableHTML_column_5">1.96748025</td>
+  <td id="tableHTML_column_6">2.47265635</td>
+  <td id="tableHTML_column_7">0.023449600819</td>
+  <td id="tableHTML_column_8">2351</td>
+  <td id="tableHTML_column_9">36740.16</td>
+  <td id="tableHTML_column_10">2025.48544423</td>
+  <td id="tableHTML_column_11">20000</td>
+  <td id="tableHTML_column_12">23378.48</td>
+  <td id="tableHTML_column_13">1.92048285</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">12</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/117442067-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/117442067-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">117442067</td>
+  <td id="tableHTML_column_3">Carma Managed Futures</td>
+  <td id="tableHTML_column_4">8.53312061</td>
+  <td id="tableHTML_column_5">2.10013882</td>
+  <td id="tableHTML_column_6">2.36821682</td>
+  <td id="tableHTML_column_7">0.068606476595</td>
+  <td id="tableHTML_column_8">573</td>
+  <td id="tableHTML_column_9">144406</td>
+  <td id="tableHTML_column_10">5676.81807031</td>
+  <td id="tableHTML_column_11">75000</td>
+  <td id="tableHTML_column_12">78438</td>
+  <td id="tableHTML_column_13">2.06391619</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">13</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/98995198-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/98995198-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">98995198</td>
+  <td id="tableHTML_column_3">Portfolio Trader PRO</td>
+  <td id="tableHTML_column_4">10.24841257</td>
+  <td id="tableHTML_column_5">1.87116222</td>
+  <td id="tableHTML_column_6">2.29789873</td>
+  <td id="tableHTML_column_7">0.027582087271</td>
+  <td id="tableHTML_column_8">1402</td>
+  <td id="tableHTML_column_9">132718.89</td>
+  <td id="tableHTML_column_10">5132.25093719</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">102669.81</td>
+  <td id="tableHTML_column_13">1.36439585</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">14</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/106901765-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/106901765-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">106901765</td>
+  <td id="tableHTML_column_3">VIXTrader</td>
+  <td id="tableHTML_column_4">6.90562673</td>
+  <td id="tableHTML_column_5">1.78147897</td>
+  <td id="tableHTML_column_6">2.27868007</td>
+  <td id="tableHTML_column_7">0.051194165213</td>
+  <td id="tableHTML_column_8">1096</td>
+  <td id="tableHTML_column_9">74625.31</td>
+  <td id="tableHTML_column_10">4187.13697232</td>
+  <td id="tableHTML_column_11">25000</td>
+  <td id="tableHTML_column_12">39271.89</td>
+  <td id="tableHTML_column_13">2.05511933</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">15</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/98996797-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/98996797-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">98996797</td>
+  <td id="tableHTML_column_3">WOversold</td>
+  <td id="tableHTML_column_4">10.79715279</td>
+  <td id="tableHTML_column_5">1.63881563</td>
+  <td id="tableHTML_column_6">2.16230269</td>
+  <td id="tableHTML_column_7">0.018649870616</td>
+  <td id="tableHTML_column_8">1401</td>
+  <td id="tableHTML_column_9">124232.04</td>
+  <td id="tableHTML_column_10">3245.99297278</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">108751.06</td>
+  <td id="tableHTML_column_13">1.14942216</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">16</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/117412922-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/117412922-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">117412922</td>
+  <td id="tableHTML_column_3">Tasty Plays</td>
+  <td id="tableHTML_column_4">12.68138982</td>
+  <td id="tableHTML_column_5">2.17442557</td>
+  <td id="tableHTML_column_6">1.99550097</td>
+  <td id="tableHTML_column_7">0.037655601196</td>
+  <td id="tableHTML_column_8">576</td>
+  <td id="tableHTML_column_9">134001.71</td>
+  <td id="tableHTML_column_10">2906.44701197</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">100435.23</td>
+  <td id="tableHTML_column_13">1.35423427</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">17</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/75976336-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/75976336-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">75976336</td>
+  <td id="tableHTML_column_3">SP100 Short Term Swing</td>
+  <td id="tableHTML_column_4">6.69257761</td>
+  <td id="tableHTML_column_5">1.42133084</td>
+  <td id="tableHTML_column_6">1.81348311</td>
+  <td id="tableHTML_column_7">0.018997086277</td>
+  <td id="tableHTML_column_8">2638</td>
+  <td id="tableHTML_column_9">226797.2</td>
+  <td id="tableHTML_column_10">11365.78600389</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">111774.85</td>
+  <td id="tableHTML_column_13">2.22929086</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">18</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/117530196-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/117530196-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">117530196</td>
+  <td id="tableHTML_column_3">EURUSD Forex Profits</td>
+  <td id="tableHTML_column_4">20.98977636</td>
+  <td id="tableHTML_column_5">1.13153073</td>
+  <td id="tableHTML_column_6">1.48498954</td>
+  <td id="tableHTML_column_7">0.027718656686</td>
+  <td id="tableHTML_column_8">567</td>
+  <td id="tableHTML_column_9">65698</td>
+  <td id="tableHTML_column_10">1032.54119403</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">55866</td>
+  <td id="tableHTML_column_13">1.22829506</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">19</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/121644864-enddate-2019-11-04-statgap-90.png'><img src='./pictures_bsscore/121644864-enddate-2019-11-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">121644864</td>
+  <td id="tableHTML_column_3">3 FOLD MYM</td>
+  <td id="tableHTML_column_4">7.32654552</td>
+  <td id="tableHTML_column_5">7.22872279</td>
+  <td id="tableHTML_column_6">0.25413311</td>
+  <td id="tableHTML_column_7">0.085557367868</td>
+  <td id="tableHTML_column_8">315</td>
+  <td id="tableHTML_column_9">16046.6</td>
+  <td id="tableHTML_column_10">432.46503066</td>
+  <td id="tableHTML_column_11">10000</td>
+  <td id="tableHTML_column_12">16015.6</td>
+  <td id="tableHTML_column_13">1.1258074</td>
+</tr>
+</tbody>
+</table></div>
+        </body>
+        </html>
+  

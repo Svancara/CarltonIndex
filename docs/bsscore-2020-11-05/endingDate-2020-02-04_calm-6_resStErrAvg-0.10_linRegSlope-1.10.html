@@ -1,0 +1,584 @@
+
+    <html>
+    <head>
+     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>BSScore debugging</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+}
+</style>
+        </head>
+        <body>
+        <p><h2>Calculated for 2020-02-04</h2> 
+                   <table><row><td><p> Selection params: </p> 
+                    <p> Calmar >= 6 </p> 
+                    <p> Linear regression residuals standard error adjusted &le; 0.10 </p> 
+                    <p> Linear regression slope &ge; 1.10 </p> 
+                    <p> Equity can't fall under starting capital after statistics quarantine time</p> 
+                    <p> Ordered by scoreAdjusted desc</p> </td><td>
+  <p>Chart: </p>
+  <p>Red vertical line: A system quarantine.</p>
+  <p>Black vertical line: A statistics quarantine. We are waiting fore data allowing to use statistics.</p>
+  <p>Blue horizontal line: Starting capital. (The first equity value actually.)</p>
+  <p>Quarantine = 3 months (60 trading days)</p> 
+  <p> Statistics quarantine = 3 months (60 trading days)</p>   
+  </td></row></table></p>
+        <div>
+<table style="border-collapse:collapse;" class=table_5161 border=1>
+<thead>
+<tr>
+  <th id="tableHTML_header_1"> </th>
+  <th id="tableHTML_header_2">Chart180</th>
+  <th id="tableHTML_header_3">systemid</th>
+  <th id="tableHTML_header_4">SystemName</th>
+  <th id="tableHTML_header_5">calmar</th>
+  <th id="tableHTML_header_6">score</th>
+  <th id="tableHTML_header_7">scoreAdjusted</th>
+  <th id="tableHTML_header_8">ResStErrAvg</th>
+  <th id="tableHTML_header_9">AgeDays</th>
+  <th id="tableHTML_header_10">Equity</th>
+  <th id="tableHTML_header_11">residualStandardError</th>
+  <th id="tableHTML_header_12">StartingCash</th>
+  <th id="tableHTML_header_13">MinEquity</th>
+  <th id="tableHTML_header_14">LinRegSlope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td id="tableHTML_rownames">1</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/122397210-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/122397210-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">122397210</td>
+  <td id="tableHTML_column_3">Futrs only</td>
+  <td id="tableHTML_column_4">36.94075543</td>
+  <td id="tableHTML_column_5">21.12531385</td>
+  <td id="tableHTML_column_6">21.00573031</td>
+  <td id="tableHTML_column_7">0.03801424622</td>
+  <td id="tableHTML_column_8">363</td>
+  <td id="tableHTML_column_9">53106.03</td>
+  <td id="tableHTML_column_10">732.81920917</td>
+  <td id="tableHTML_column_11">26093</td>
+  <td id="tableHTML_column_12">48243.63</td>
+  <td id="tableHTML_column_13">1.20019762</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">2</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/123139019-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/123139019-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">123139019</td>
+  <td id="tableHTML_column_3">The Candle SP 500</td>
+  <td id="tableHTML_column_4">24.06636156</td>
+  <td id="tableHTML_column_5">12.63019518</td>
+  <td id="tableHTML_column_6">15.46226425</td>
+  <td id="tableHTML_column_7">0.062990100031</td>
+  <td id="tableHTML_column_8">310</td>
+  <td id="tableHTML_column_9">63102</td>
+  <td id="tableHTML_column_10">1232.18840057</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">57991.5</td>
+  <td id="tableHTML_column_13">1.23825826</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">3</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/123479706-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/123479706-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">123479706</td>
+  <td id="tableHTML_column_3">NEURAL STARK STRATEGY</td>
+  <td id="tableHTML_column_4">18.05058688</td>
+  <td id="tableHTML_column_5">11.37727233</td>
+  <td id="tableHTML_column_6">14.45571714</td>
+  <td id="tableHTML_column_7">0.09005461485</td>
+  <td id="tableHTML_column_8">280</td>
+  <td id="tableHTML_column_9">62297.81</td>
+  <td id="tableHTML_column_10">1570.85747995</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">60088.17</td>
+  <td id="tableHTML_column_13">1.19538557</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">4</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/124343595-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/124343595-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">124343595</td>
+  <td id="tableHTML_column_3">C2Star App SuperBands</td>
+  <td id="tableHTML_column_4">16.66004792</td>
+  <td id="tableHTML_column_5">12.57029412</td>
+  <td id="tableHTML_column_6">13.84170696</td>
+  <td id="tableHTML_column_7">0.074144084823</td>
+  <td id="tableHTML_column_8">214</td>
+  <td id="tableHTML_column_9">69539.04</td>
+  <td id="tableHTML_column_10">1103.36441478</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">66709.82</td>
+  <td id="tableHTML_column_13">1.18319798</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">5</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/122671334-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/122671334-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">122671334</td>
+  <td id="tableHTML_column_3">VXX Volatility Trader</td>
+  <td id="tableHTML_column_4">20.78367978</td>
+  <td id="tableHTML_column_5">12.58166121</td>
+  <td id="tableHTML_column_6">11.95911707</td>
+  <td id="tableHTML_column_7">0.038092083545</td>
+  <td id="tableHTML_column_8">344</td>
+  <td id="tableHTML_column_9">57791.1</td>
+  <td id="tableHTML_column_10">757.27589282</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">51250.4</td>
+  <td id="tableHTML_column_13">1.15101728</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">6</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/123458321-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/123458321-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">123458321</td>
+  <td id="tableHTML_column_3">ES DSXmes</td>
+  <td id="tableHTML_column_4">27.34250478</td>
+  <td id="tableHTML_column_5">10.14016309</td>
+  <td id="tableHTML_column_6">10.77849811</td>
+  <td id="tableHTML_column_7">0.09325193878</td>
+  <td id="tableHTML_column_8">281</td>
+  <td id="tableHTML_column_9">46935.05</td>
+  <td id="tableHTML_column_10">1229.87641899</td>
+  <td id="tableHTML_column_11">29160</td>
+  <td id="tableHTML_column_12">39940.08</td>
+  <td id="tableHTML_column_13">1.25196657</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">7</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/122867565-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/122867565-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">122867565</td>
+  <td id="tableHTML_column_3">SP 500 eMini 2 contracts</td>
+  <td id="tableHTML_column_4">17.75960814</td>
+  <td id="tableHTML_column_5">8.45260892</td>
+  <td id="tableHTML_column_6">10.1738168</td>
+  <td id="tableHTML_column_7">0.084229345272</td>
+  <td id="tableHTML_column_8">330</td>
+  <td id="tableHTML_column_9">47134</td>
+  <td id="tableHTML_column_10">1310.12176682</td>
+  <td id="tableHTML_column_11">25000</td>
+  <td id="tableHTML_column_12">36870</td>
+  <td id="tableHTML_column_13">1.54912637</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">8</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/121957290-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/121957290-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">121957290</td>
+  <td id="tableHTML_column_3">TRADEofficer-QuantOne</td>
+  <td id="tableHTML_column_4">13.29050887</td>
+  <td id="tableHTML_column_5">6.81520823</td>
+  <td id="tableHTML_column_6">8.83579909</td>
+  <td id="tableHTML_column_7">0.08181220026</td>
+  <td id="tableHTML_column_8">386</td>
+  <td id="tableHTML_column_9">61193.49</td>
+  <td id="tableHTML_column_10">1932.46038658</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">50423.59</td>
+  <td id="tableHTML_column_13">1.11898218</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">9</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/121644864-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/121644864-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">121644864</td>
+  <td id="tableHTML_column_3">3 FOLD MYM</td>
+  <td id="tableHTML_column_4">7.38772715</td>
+  <td id="tableHTML_column_5">7.07484569</td>
+  <td id="tableHTML_column_6">8.81151178</td>
+  <td id="tableHTML_column_7">0.057198054787</td>
+  <td id="tableHTML_column_8">407</td>
+  <td id="tableHTML_column_9">16180.6</td>
+  <td id="tableHTML_column_10">376.67803003</td>
+  <td id="tableHTML_column_11">10000</td>
+  <td id="tableHTML_column_12">15993.6</td>
+  <td id="tableHTML_column_13">1.13446103</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">10</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/122174758-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/122174758-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">122174758</td>
+  <td id="tableHTML_column_3">Small Ball</td>
+  <td id="tableHTML_column_4">13.75987062</td>
+  <td id="tableHTML_column_5">7.06115169</td>
+  <td id="tableHTML_column_6">7.66962572</td>
+  <td id="tableHTML_column_7">0.059532454386</td>
+  <td id="tableHTML_column_8">375</td>
+  <td id="tableHTML_column_9">65937.3</td>
+  <td id="tableHTML_column_10">1472.02848921</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">54369.9</td>
+  <td id="tableHTML_column_13">1.31891561</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">11</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/123261809-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/123261809-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">123261809</td>
+  <td id="tableHTML_column_3">AlphaQ</td>
+  <td id="tableHTML_column_4">9.19530213</td>
+  <td id="tableHTML_column_5">6.48974305</td>
+  <td id="tableHTML_column_6">7.18868228</td>
+  <td id="tableHTML_column_7">0.087237511826</td>
+  <td id="tableHTML_column_8">300</td>
+  <td id="tableHTML_column_9">65559.01</td>
+  <td id="tableHTML_column_10">1715.76147305</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">55477.84</td>
+  <td id="tableHTML_column_13">1.15658423</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">12</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/122201566-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/122201566-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">122201566</td>
+  <td id="tableHTML_column_3">TRADEofficer-QuantThree</td>
+  <td id="tableHTML_column_4">7.13437865</td>
+  <td id="tableHTML_column_5">5.26314975</td>
+  <td id="tableHTML_column_6">6.20569359</td>
+  <td id="tableHTML_column_7">0.054053262009</td>
+  <td id="tableHTML_column_8">373</td>
+  <td id="tableHTML_column_9">48913.3</td>
+  <td id="tableHTML_column_10">986.1834359</td>
+  <td id="tableHTML_column_11">40000</td>
+  <td id="tableHTML_column_12">42222.3</td>
+  <td id="tableHTML_column_13">1.14392826</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">13</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/123163369-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/123163369-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">123163369</td>
+  <td id="tableHTML_column_3">Managed Vol Fund</td>
+  <td id="tableHTML_column_4">14.14139536</td>
+  <td id="tableHTML_column_5">4.64955562</td>
+  <td id="tableHTML_column_6">6.12735004</td>
+  <td id="tableHTML_column_7">0.083449135951</td>
+  <td id="tableHTML_column_8">308</td>
+  <td id="tableHTML_column_9">247739.57</td>
+  <td id="tableHTML_column_10">6367.48514165</td>
+  <td id="tableHTML_column_11">200129</td>
+  <td id="tableHTML_column_12">203641.34</td>
+  <td id="tableHTML_column_13">1.14904802</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">14</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/124463618-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/124463618-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">124463618</td>
+  <td id="tableHTML_column_3">Risk On - Risk Off</td>
+  <td id="tableHTML_column_4">38.25779273</td>
+  <td id="tableHTML_column_5">5.04843973</td>
+  <td id="tableHTML_column_6">5.65347368</td>
+  <td id="tableHTML_column_7">0.037602582472</td>
+  <td id="tableHTML_column_8">204</td>
+  <td id="tableHTML_column_9">28425.54</td>
+  <td id="tableHTML_column_10">218.05023728</td>
+  <td id="tableHTML_column_11">25000</td>
+  <td id="tableHTML_column_12">27794.54</td>
+  <td id="tableHTML_column_13">1.11803803</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">15</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/119874753-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/119874753-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">119874753</td>
+  <td id="tableHTML_column_3">GALEFORCE</td>
+  <td id="tableHTML_column_4">8.1151989</td>
+  <td id="tableHTML_column_5">3.9328051</td>
+  <td id="tableHTML_column_6">4.85328512</td>
+  <td id="tableHTML_column_7">0.085608399375</td>
+  <td id="tableHTML_column_8">507</td>
+  <td id="tableHTML_column_9">266219.1</td>
+  <td id="tableHTML_column_10">11554.82965422</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">141639</td>
+  <td id="tableHTML_column_13">2.36579359</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">16</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/119935430-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/119935430-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">119935430</td>
+  <td id="tableHTML_column_3">golden road</td>
+  <td id="tableHTML_column_4">10.1679853</td>
+  <td id="tableHTML_column_5">3.57335557</td>
+  <td id="tableHTML_column_6">4.51187172</td>
+  <td id="tableHTML_column_7">0.082889616326</td>
+  <td id="tableHTML_column_8">503</td>
+  <td id="tableHTML_column_9">16604.32</td>
+  <td id="tableHTML_column_10">692.29183422</td>
+  <td id="tableHTML_column_11">10000</td>
+  <td id="tableHTML_column_12">12491.95</td>
+  <td id="tableHTML_column_13">1.42828933</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">17</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/121872737-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/121872737-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">121872737</td>
+  <td id="tableHTML_column_3">Aggressive Trend Scalper</td>
+  <td id="tableHTML_column_4">13.77373921</td>
+  <td id="tableHTML_column_5">3.16068598</td>
+  <td id="tableHTML_column_6">4.20034952</td>
+  <td id="tableHTML_column_7">0.071505314465</td>
+  <td id="tableHTML_column_8">391</td>
+  <td id="tableHTML_column_9">90948</td>
+  <td id="tableHTML_column_10">2542.77674791</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">72553</td>
+  <td id="tableHTML_column_13">1.37156687</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">18</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/124270346-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/124270346-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">124270346</td>
+  <td id="tableHTML_column_3">SPODD500</td>
+  <td id="tableHTML_column_4">20.76233147</td>
+  <td id="tableHTML_column_5">4.34680356</td>
+  <td id="tableHTML_column_6">4.00122189</td>
+  <td id="tableHTML_column_7">0.052128296082</td>
+  <td id="tableHTML_column_8">221</td>
+  <td id="tableHTML_column_9">64830.38</td>
+  <td id="tableHTML_column_10">746.86889087</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">61517.88</td>
+  <td id="tableHTML_column_13">1.15025144</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">19</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/104155140-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/104155140-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">104155140</td>
+  <td id="tableHTML_column_3">ETF Leverage Reversal</td>
+  <td id="tableHTML_column_4">11.95998083</td>
+  <td id="tableHTML_column_5">2.81545076</td>
+  <td id="tableHTML_column_6">3.49663042</td>
+  <td id="tableHTML_column_7">0.03814300216</td>
+  <td id="tableHTML_column_8">1325</td>
+  <td id="tableHTML_column_9">81124.55</td>
+  <td id="tableHTML_column_10">4099.99239882</td>
+  <td id="tableHTML_column_11">25000</td>
+  <td id="tableHTML_column_12">26451.69</td>
+  <td id="tableHTML_column_13">2.71295008</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">20</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/104952602-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/104952602-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">104952602</td>
+  <td id="tableHTML_column_3">VIX Tactical Trader</td>
+  <td id="tableHTML_column_4">7.49575187</td>
+  <td id="tableHTML_column_5">2.66917673</td>
+  <td id="tableHTML_column_6">3.40689545</td>
+  <td id="tableHTML_column_7">0.052154119011</td>
+  <td id="tableHTML_column_8">1159</td>
+  <td id="tableHTML_column_9">28990.42</td>
+  <td id="tableHTML_column_10">1752.37301541</td>
+  <td id="tableHTML_column_11">10000</td>
+  <td id="tableHTML_column_12">14966.64</td>
+  <td id="tableHTML_column_13">2.35583917</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">21</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/123689650-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/123689650-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">123689650</td>
+  <td id="tableHTML_column_3">AT Stock Trading</td>
+  <td id="tableHTML_column_4">30.69588529</td>
+  <td id="tableHTML_column_5">2.51406035</td>
+  <td id="tableHTML_column_6">3.39250147</td>
+  <td id="tableHTML_column_7">0.098681050404</td>
+  <td id="tableHTML_column_8">264</td>
+  <td id="tableHTML_column_9">61545.25</td>
+  <td id="tableHTML_column_10">1603.36437819</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">52409.26</td>
+  <td id="tableHTML_column_13">1.12832203</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">22</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/116569503-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/116569503-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">116569503</td>
+  <td id="tableHTML_column_3">FOREX SWING SYSTEM</td>
+  <td id="tableHTML_column_4">16.66230289</td>
+  <td id="tableHTML_column_5">2.55158674</td>
+  <td id="tableHTML_column_6">3.36611828</td>
+  <td id="tableHTML_column_7">0.032951052988</td>
+  <td id="tableHTML_column_8">718</td>
+  <td id="tableHTML_column_9">392014</td>
+  <td id="tableHTML_column_10">9274.6027938</td>
+  <td id="tableHTML_column_11">250000</td>
+  <td id="tableHTML_column_12">283184</td>
+  <td id="tableHTML_column_13">1.43801705</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">23</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/77477692-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/77477692-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">77477692</td>
+  <td id="tableHTML_column_3">The Vegan Growth Port</td>
+  <td id="tableHTML_column_4">9.60445685</td>
+  <td id="tableHTML_column_5">2.26402642</td>
+  <td id="tableHTML_column_6">2.90263801</td>
+  <td id="tableHTML_column_7">0.027070863411</td>
+  <td id="tableHTML_column_8">2647</td>
+  <td id="tableHTML_column_9">373450.96</td>
+  <td id="tableHTML_column_10">26760.21689213</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">108663.03</td>
+  <td id="tableHTML_column_13">3.7135379</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">24</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/117442067-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/117442067-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">117442067</td>
+  <td id="tableHTML_column_3">Carma Managed Futures</td>
+  <td id="tableHTML_column_4">10.33551971</td>
+  <td id="tableHTML_column_5">2.24825274</td>
+  <td id="tableHTML_column_6">2.63271605</td>
+  <td id="tableHTML_column_7">0.059999332835</td>
+  <td id="tableHTML_column_8">665</td>
+  <td id="tableHTML_column_9">174908</td>
+  <td id="tableHTML_column_10">6978.75159951</td>
+  <td id="tableHTML_column_11">75000</td>
+  <td id="tableHTML_column_12">78438</td>
+  <td id="tableHTML_column_13">2.39620956</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">25</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/81128026-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/81128026-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">81128026</td>
+  <td id="tableHTML_column_3">Carma Stocks</td>
+  <td id="tableHTML_column_4">13.37196896</td>
+  <td id="tableHTML_column_5">1.91814027</td>
+  <td id="tableHTML_column_6">2.42063607</td>
+  <td id="tableHTML_column_7">0.023013019223</td>
+  <td id="tableHTML_column_8">2443</td>
+  <td id="tableHTML_column_9">37146.26</td>
+  <td id="tableHTML_column_10">2088.39267566</td>
+  <td id="tableHTML_column_11">20000</td>
+  <td id="tableHTML_column_12">23378.48</td>
+  <td id="tableHTML_column_13">1.92504916</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">26</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/123562056-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/123562056-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">123562056</td>
+  <td id="tableHTML_column_3">NASDAQ Mc</td>
+  <td id="tableHTML_column_4">14.64649793</td>
+  <td id="tableHTML_column_5">5.34504978</td>
+  <td id="tableHTML_column_6">2.30323974</td>
+  <td id="tableHTML_column_7">0.087749628713</td>
+  <td id="tableHTML_column_8">273</td>
+  <td id="tableHTML_column_9">42671.4</td>
+  <td id="tableHTML_column_10">1022.22106532</td>
+  <td id="tableHTML_column_11">29084</td>
+  <td id="tableHTML_column_12">39359.54</td>
+  <td id="tableHTML_column_13">1.259885</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">27</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/106901765-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/106901765-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">106901765</td>
+  <td id="tableHTML_column_3">VIXTrader</td>
+  <td id="tableHTML_column_4">7.00344146</td>
+  <td id="tableHTML_column_5">1.76022588</td>
+  <td id="tableHTML_column_6">2.28095252</td>
+  <td id="tableHTML_column_7">0.044963855281</td>
+  <td id="tableHTML_column_8">1188</td>
+  <td id="tableHTML_column_9">75682.34</td>
+  <td id="tableHTML_column_10">4042.72810235</td>
+  <td id="tableHTML_column_11">25000</td>
+  <td id="tableHTML_column_12">39271.89</td>
+  <td id="tableHTML_column_13">2.13396055</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">28</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/98995198-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/98995198-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">98995198</td>
+  <td id="tableHTML_column_3">Portfolio Trader PRO</td>
+  <td id="tableHTML_column_4">10.78726876</td>
+  <td id="tableHTML_column_5">1.81042211</td>
+  <td id="tableHTML_column_6">2.25842936</td>
+  <td id="tableHTML_column_7">0.024299549652</td>
+  <td id="tableHTML_column_8">1494</td>
+  <td id="tableHTML_column_9">139697.18</td>
+  <td id="tableHTML_column_10">5071.50037118</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">102669.81</td>
+  <td id="tableHTML_column_13">1.37876544</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">29</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/98996797-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/98996797-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">98996797</td>
+  <td id="tableHTML_column_3">WOversold</td>
+  <td id="tableHTML_column_4">10.81368938</td>
+  <td id="tableHTML_column_5">1.62250262</td>
+  <td id="tableHTML_column_6">2.1529101</td>
+  <td id="tableHTML_column_7">0.016924302798</td>
+  <td id="tableHTML_column_8">1493</td>
+  <td id="tableHTML_column_9">124422.31</td>
+  <td id="tableHTML_column_10">3143.90094793</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">108751.06</td>
+  <td id="tableHTML_column_13">1.15747689</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">30</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/106004078-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/106004078-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">106004078</td>
+  <td id="tableHTML_column_3">BlackAce</td>
+  <td id="tableHTML_column_4">6.78625548</td>
+  <td id="tableHTML_column_5">1.48522948</td>
+  <td id="tableHTML_column_6">1.93111222</td>
+  <td id="tableHTML_column_7">0.040010467294</td>
+  <td id="tableHTML_column_8">1231</td>
+  <td id="tableHTML_column_9">21675.3</td>
+  <td id="tableHTML_column_10">1067.57106342</td>
+  <td id="tableHTML_column_11">10000</td>
+  <td id="tableHTML_column_12">10830.6</td>
+  <td id="tableHTML_column_13">2.11394338</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">31</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/75976336-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/75976336-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">75976336</td>
+  <td id="tableHTML_column_3">SP100 Short Term Swing</td>
+  <td id="tableHTML_column_4">6.97885409</td>
+  <td id="tableHTML_column_5">1.41725227</td>
+  <td id="tableHTML_column_6">1.80047817</td>
+  <td id="tableHTML_column_7">0.017599973154</td>
+  <td id="tableHTML_column_8">2730</td>
+  <td id="tableHTML_column_9">236498.5</td>
+  <td id="tableHTML_column_10">11363.26259502</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">111774.85</td>
+  <td id="tableHTML_column_13">2.25119317</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">32</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/117412922-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/117412922-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">117412922</td>
+  <td id="tableHTML_column_3">Tasty Plays</td>
+  <td id="tableHTML_column_4">13.40710622</td>
+  <td id="tableHTML_column_5">2.37947173</td>
+  <td id="tableHTML_column_6">1.78529442</td>
+  <td id="tableHTML_column_7">0.03268590008</td>
+  <td id="tableHTML_column_8">668</td>
+  <td id="tableHTML_column_9">141670.21</td>
+  <td id="tableHTML_column_10">3093.25304337</td>
+  <td id="tableHTML_column_11">1e+05</td>
+  <td id="tableHTML_column_12">100435.23</td>
+  <td id="tableHTML_column_13">1.39877265</td>
+</tr>
+<tr>
+  <td id="tableHTML_rownames">33</td>
+  <td id="tableHTML_column_1"><a href='./pictures_bsscore/117530196-enddate-2020-02-04-statgap-90.png'><img src='./pictures_bsscore/117530196-enddate-2020-02-04-statgap-90.png' height'=150' width='200'/></a></td>
+  <td id="tableHTML_column_2">117530196</td>
+  <td id="tableHTML_column_3">EURUSD Forex Profits</td>
+  <td id="tableHTML_column_4">21.24536741</td>
+  <td id="tableHTML_column_5">1.19691288</td>
+  <td id="tableHTML_column_6">1.50490883</td>
+  <td id="tableHTML_column_7">0.02645239548</td>
+  <td id="tableHTML_column_8">659</td>
+  <td id="tableHTML_column_9">66498</td>
+  <td id="tableHTML_column_10">1159.20168906</td>
+  <td id="tableHTML_column_11">50000</td>
+  <td id="tableHTML_column_12">55866</td>
+  <td id="tableHTML_column_13">1.24436657</td>
+</tr>
+</tbody>
+</table></div>
+        </body>
+        </html>
+  
