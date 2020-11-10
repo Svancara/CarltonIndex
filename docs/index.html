@@ -7,7 +7,76 @@
   </head>
   <body>
 
-  <h2>Results from 2010-20-29 - Leverage data overview</h2>
+  <h2>Results from 2020-11-10 - Leverage data </h2>
+
+  
+    <ul>
+        <li>Results are provided for the latest and some historical dates.</li>
+        <li>Each date contains pages for all rolling periods.</li>
+        <li>Each rolling period page contains columns for all three types of calculations: ProformaReturn, LeverageWeighted, LeverageWeighted smoothed using SMA(7) as specified on  
+        <a href="https://collective2.slack.com/archives/CH97NLREC/p1604068282402300">Slack</a>.</li>
+        <li>Conditions for systems selection: 10% <= AnnReturn <= 40% and MaxDrawdown <= 60% (see tables captions )</li>
+        <li>Tables on the WWW pages are sortable, can be filtered and searched and columns can be reordered. Default sorting: ProformaReturnRolling DESC</li>
+        <li>All values are calculated as of the specified historical dates. Except the number of trades that is at the last date. (I made an error).</li>
+        <li>Strategies are preselected as before.
+        <ul>
+             <li>Live strategies only.</li>
+             <li>Strategies ages must be greater than 180 + 30 days (today(*)). (The shortest rolling period + 30 days for monthly returns.)</li>
+             <li>(*) Strategies ages are as of the <b>latest date</b> (today). It means some strategies does not have enough data in historical calculations.</li>
+            </ul>
+         </li>
+    </ul>
+
+    <p><a href="https://svancara.github.io/CarltonIndex/carlton-2020-11-10/index.html">All that is here.</a></p>
+
+    <p>
+        Here is a CSV datafile containing data the above www pages were generated from. 
+        <a href="https://svancara.github.io/CarltonIndex/carlton-2020-11-10/Carlton_index_2020-11-06.zip">Carlton_index_2020-11-06.zip</a>
+    </p>
+    
+    <p>
+    That data are selected using this query:
+<pre>
+  select
+   `date` as calculated,
+   c.systemid,
+   s.SystemName,
+   DATEDIFF(`date`,date(from_unixtime(c2s.added))) as AgeDays,
+   s.StartingCash,
+   eq.totalpl as Equity,
+   (select min(totalpl) from c2ex_equity_daily eq where eq.systemid = c.systemid) as MinEquity,
+   ReturnAnnual,
+   MaxDrawdown,
+   NumTrades,
+   ProformaReturnRolling180,
+   ProformaReturnRolling210,
+   ProformaReturnRolling240,
+   ProformaReturnRolling270,
+   LeverageWght180,
+   LeverageWght210,
+   LeverageWght240,
+   LeverageWght270,
+   LeverageWghtSMA7180,
+   LeverageWghtSMA7210,
+   LeverageWghtSMA7240,
+   LeverageWghtSMA7270
+ from carlton_score c
+ join systems s on s.systemid=c.systemid
+ join c2ex_equity_daily eq on eq.systemid=c.systemid and eq.datetime=c.date
+ join c2systems c2s on c2s.guid=c.systemid
+ where date > "2018" and 0.1 <= ReturnAnnual and ReturnAnnual <= 0.4 and MaxDrawdown < 0.6
+ order by 1,2
+</pre>
+</p>
+
+    <ul>
+       <li><a href="https://github.com/Svancara/CarltonIndex/blob/main/LeverageDataOverview.ipynb">Description</a></li>
+       <li><a href="https://svancara.github.io/CarltonIndex/LeverageData_sample_since_2020-10-01.zip">LeverageData_sample_since_2020-10-01.zip</a></li>
+    </ul>
+
+  <hr>
+
+  <h2>Results from 2020-10-29 - Leverage data overview</h2>
 
     <ul>
         <li><a href="https://github.com/Svancara/CarltonIndex/blob/main/LeverageDataOverview.ipynb">Description</a></li>
@@ -17,7 +86,7 @@
 
   <hr>
 
-  <h2>Results from 2010-20-27</h2>
+  <h2>Results from 2020-10-27</h2>
   
   <p>There are 8 pages there.</p>
   
@@ -51,7 +120,7 @@
 
   <hr>
       
-  <h2>Results from 2010-10-15</h2>
+  <h2>Results from 2020-10-15</h2>
 
     <ul>
   <li><a href="https://github.com/Svancara/CarltonIndex/blob/main/Run-2020-10-15.ipynb">Description notebook</a></li>
