@@ -7,9 +7,29 @@
   </head>
   <body>
 
-  <h2>Results from 2020-11-10 - Leverage data </h2>
+  <h2>Results from 2020-11-13 - Leverage data </h2>
+  
+  <p>The previous calculations fixed.</p> 
+
+  <p>Changes:</p> 
+  
+  <ul title="Changes"></ul>
+        <li>Fixed the most basic error: An equity value in the numerator instead of the daily result.</li>
+        <li>Absolute value of the daily result used in the division "return / leverage" (Daily results can be negative which does not make sense here.)</li>
+        <li>Data slightly re-aligned because of SMA(7) usage.</li>
+        <li>fraction Return/Leverage multiplied by 100 to get more similar numbers.</li>
+   </ul>
+   
+  <p>A "unit test" performed manually in Excel is here <a href="https://svancara.github.io/CarltonIndex/carlton-2020-11-13/strategy126548162.xlsx">strategy126548162.xlsx</a>.
+    Manual and software results are the same.
+  </p> 
 
   
+    <p><a href="https://svancara.github.io/CarltonIndex/carlton-2020-11-13/index.html">Results are here.</a></p>
+
+  <hr>
+
+  <h2>Results from 2020-11-10 - Leverage data </h2>
     <ul>
         <li>Results are provided for the latest and some historical dates.</li>
         <li>Each date contains pages for all rolling periods.</li>
