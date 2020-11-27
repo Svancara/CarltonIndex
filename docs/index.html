@@ -7,6 +7,63 @@
   </head>
   <body>
 
+  <h2>Results from 2020-11-27 - Carlton's Excel algorithm </h2>
+
+
+  <h3>Excel files</h3>
+
+    <p>The results presented today contain data calculated by the algorithm implemented in Carlton's Excel as a guidance.</p>
+  
+
+  <p>Here is the original Carlton's Excel: <a href="https://svancara.github.io/CarltonIndex/carlton-2020-11-26/excel/Bob_Carlton-Excel_calcs_2020_1125.xlsx">Bob_Carlton-Excel_calcs_2020_1125.xlsx</a>.</p> 
+   
+  <p>
+   Here is the same Excel sligthly cleaned by me (undefined data above averages and SD calculation removed; rows aligned; some zero testing before dividing fixed)
+   and used as a unit test. 
+  </p>  
+   <p>It contains results from the software which implements the same calculations on the C2 side:
+    <a href="https://svancara.github.io/CarltonIndex/carlton-2020-11-26/excel/Bob_Carlton-Excel_calcs_2020_1125_with_results.xlsx">Bob_Carlton-Excel_calcs_2020_1125_with_results.xlsx</a>.
+   </p> 
+
+   <p>
+     Software results are placed after original Carlton's columns.  
+   </p> 
+   <p>
+     Column "O" ("SOFTWARE COLUMN N") contains software results calculated by Carlton in the column "N".  
+   </p> 
+   <p>
+     Column "Q" ("SOFTWARE COLUMN H") contains software results calculated by Carlton in the column "H".  
+   </p> 
+   
+  <p>
+    Software results are the same like Carlton's. See columns "P" and "R". 
+  </p>
+    
+    
+    <h3>Results pages</h3>
+
+
+<ul>
+<li><p>Tables do not contain "plain leverage" data calculations now, because we are working just with moving averages of the leverage data:  SMA(Leverage,7)</p></li>
+<li><p>Column "ProformaRolling" is the same like before. (Calculated per earlier specifications. Not in the last Carlton's Excel.)</p></li>
+<li><p>Column "ProformaRollingPic" is "ProformaRolling" data visualised.</p></li>
+<li><p>Column LvrgSMA7 is a chart of SMA(Leverage,7)</p></li>
+
+<li><p>Column "Column H" is the same column as in the Carlton's Excel and the column "Column_H_Pic" is that column visualised.</p></li>
+<li><p>Column "Column N" is the same column as in the Carlton's Excel and the column "Column_N_Pic" is that column visualised.</p></li>
+</ul>
+   
+<h3>
+ Reminder
+</h3>
+  <p>
+   I want to remind eveyone that a condition for the systems selection is this: 10% <= AnnReturn <= 40% and MaxDrawdown <= 60% (see results pages table captions).
+   We do not use any other data for systems selection yet. Specifically: no leverage or "rolling" stats data calculated here.   
+  </p>
+
+  <hr>
+
+
   <h2>Results from 2020-11-23 - Leverage Proforma </h2>
   
   <p>Fixed results from 2020-11-19. <a href="https://collective2.slack.com/archives/CH97NLREC/p1606100230006700">See Slack.</a>   
