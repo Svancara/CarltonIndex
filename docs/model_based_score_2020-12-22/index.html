@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title></title>
+  </head>
+  <body>
+
+<h1>
+    Model based C2Score and C2Smart Portfolio
+</h1>
+
+<p>
+   Based on my <a href="https://svancara.github.io/CarltonIndex/bsscore-2020-11-05/endingDate-2020-11-04_calm-6_resStErrAvg-0.10_linRegSlope-1.10.html">previous work</a>
+  ( <a href="https://github.com/Svancara/CarltonIndex/blob/main/BobScoreDescription.ipynb">description</a> ), 
+  I want to propose the following score and portfolio algorthms.
+</p>
+
+<p>A basic strategies selection is by Profit/MaxDD ratio.</p>
+
+<p>Then:</p>
+
+<ol>
+<li><p>Calculate 3 regression functions: linear, quadratic polynomial and power functions.</p></li>
+<li><p>Select the best of those regression functions. (By residuals stats.)</p></li>
+<li><p>If it is linear, determine if it goes up. If it is nonlinear, determine if it is convex or concave. Perhaps ALL three must go up.</p></li>
+<li><p>If we have a good regression function, make PREDICTIONS for next D days, where is D something between a week and a month.</p></li>
+<li><p>Predictions are generated for some confidence levels. Say for 85%, 90% nad 95% confidence levels.</p></li>
+<li><p>Convert predicted values to percents of the current equity of the strategy.</p></li>
+<li><p>Select X (five?) strategies with best predicted percents results. (May be other criteria too.)</p></li>
+<li><p>That selection is our new Smart Portfolio. (Selections can be made in each confidence level. We will have 3 possible portfolios with different probabilities.)</p></li>
+</ol>  
+
+<p>We will make historical backtests of this algorithm: we predict portfolios and compare their predicted results with actual results which happened D days later.</p>
+<p>
+ If it will work, we can add strategies selections by other criteria like age, number of trades or needed capital.  
+</p>  
+
+<p>
+ Then, we can try to find regression functions for shortest possible (youngest) strategies. How: regression functions have some parameters. 
+ Those parameters have some confidence levels (or somethig like that - learning needed). We can try to find parameters values which have yet sense for youngest possible strategies.
+ (Measured by something like t-test or F-statistic.)            
+</p>  
+
+<p>
+ We still need to identify a danger, martingale/scaling strategies. On this "score level" and also (ideally) in real-time after each trade too. 
+ Send an e-mail to the user if a strategy invests too much of its capital to one or two specific symbols.      
+</p>
+
+<h2>
+ Illustrations
+</h2>
+
+<p>
+ Linear regression ending on 2019-12-21:
+</p>
+<p>
+<img src="106804598-enddate-2019-12-21-statgap-90_linear.png" height="600" width="600"> 
+</p>
+
+<p>&nbsp;</p>
+<p>
+ Quadratic polynome ending on 2019-12-21: 
+</p>
+<p>
+<img src="106804598-enddate-2019-12-21-statgap-90_quadratic.png" height="600" width="600"> 
+</p>
+
+<p>&nbsp;</p>
+<p>
+ Power function ending on 2019-12-21: 
+</p>
+<p>
+<img src="106804598-enddate-2019-12-21-statgap-90_power.png" height="600" width="600"> 
+</p>
+
+
+<hr>
+
+<p>
+ Linear regression ending a year later on 2020-12-21 (just for regression illustration):
+</p>
+<p>
+<img src="106804598-enddate-2020-12-21-statgap-90_linear.png" height="600" width="600"> 
+</p>
+
+<p>&nbsp;</p>
+<p>
+ Quadratic polynome ending a year later on 2020-12-21 (just for regression illustration): 
+</p>
+<p>
+<img src="106804598-enddate-2020-12-21-statgap-90_quadratic.png" height="600" width="600"> 
+</p>
+
+<p>&nbsp;</p>
+<p>
+ Power function ending a year later on 2020-12-21 (just for regression illustration): 
+</p>
+<p>
+<img src="106804598-enddate-2020-12-21-statgap-90_power.png" height="600" width="600"> 
+</p>
+
+
+<hr>
+<p>
+ Predictions may look like this (a picture from internet): 
+</p>
+
+ <p>
+  <img src="mpcinffeb13.png">
+ </p>
+ 
+
+  </body>
+</html>
