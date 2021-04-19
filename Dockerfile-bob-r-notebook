@@ -24,6 +24,7 @@ RUN      R -e "install.packages('DBI',dependencies=TRUE, repos='cran.rstudio.com
      && R -e "install.packages('timeSeries',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
      && R -e "install.packages('TTR',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
      && R -e "install.packages('xts',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
+     && R -e "install.packages('reshape',dependencies=TRUE, repos='cran.rstudio.com/')" \ 
      && R -e "install.packages('zoo',dependencies=TRUE, repos='cran.rstudio.com/')" 
 #    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
